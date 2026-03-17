@@ -13,57 +13,62 @@
   <!-- HEADER   -->
 
   <header class="header">
-    <div class="container">
-      <div class="header__pos desktop-only">
-        <a href="#" class="desktop-only logo"><img src="assets/logo.png" /></a>
+    <div class="desktop-only">
+      <div class="container">
+        <div class="header__pos">
+          <a href="#" class="desktop-only logo"><img src="assets/logo.png" /></a>
 
-        <!-- ------------------------------------------------------------------ -->
-        <!-- <section class="header__pos"> -->
-        <!-- <div class="header__pos-desk desktop-only" > -->
-       <!-- -------------------------------------------------------------------  -->
-        <div class="desktop-only">
           <button class="img-with-icon support">
             <img src="assets/mouse.png" class="icon-img icon-gap" />
             <div>SUPPORT</div>
           </button>
-        </div>
 
-        <div class="desktop-only">
           <button class="img-with-icon contact">
             <img src="assets/contact.png" class="icon-img icon-gap" />
             <div>CONTACT</div>
           </button>
-        </div>
 
-        <div class="search desktop-only" style="display: flex; padding-top: 0;">
-          <input type="text" placeholder="Search..." class="search__input desktop-only"
-            style="border-radius: 5px 0 0 5px;" />
-          <div class="search__btn-container desktop-only">
-            <img src="assets/search.png" class="search__btn-container _img-search desktop-only" />
+          <div class="search">
+            <input type="text" placeholder="Search..." class="search__input" style="border-radius: 5px 0 0 5px;" />
+            <div class="search__btn-container ">
+              <img src="assets/search.png" class="search__btn-container " />
+            </div>
           </div>
+          <button class="btn__outline2">
+
+            <div class="menu_div"></div>
+            <div class="menu_div"></div>
+            <div class="menu_div"></div>
+          </button>
         </div>
 
-        <button class="icon-img btn__outline2 desktop-only"><img src="assets/menu.png" /></button>
+
+      </div>
+    </div>
+
+
+
+    <div class="mobile-only">
+      <div class="container">
+
+        <div class="header__pos">
+          <a href="#" class="logo"><img src="assets/logo.png" /></a>
+          <img src="assets/call.png" class="icon-img" />
+          <button class="btn__outline2">
+
+            <div class="menu_div"></div>
+            <div class="menu_div"></div>
+            <div class="menu_div"></div>
+          </button>
+        </div>
+
+        <div class="search">
+          <input type="text" placeholder="Search..." class="search__input" />
+          <img src="assets/search.png" class="search__btn icon-img" />
+        </div>
       </div>
 
-      <!-- --------------------------------------------------------------------  -->
-      <!-- </section> -->
-      <!-- <button class="btn__img mobile-only icon-img"><img src="assets/call.png" /></button>
-        <button class="btn__img mobile-only icon-img"><img src="assets/menu.png" /></button> -->
-      <!-- ---------------------------------------------------------------------- -->
-
-      
-        <div class="header__pos mobile-only">
-        <a href="#" class="mobile-only logo"><img src="assets/logo.png" /></a>
-        <img src="assets/call.png" class="mobile-only icon-img" />
-        <img src="assets/menu.png" class="mobile-only icon-img btn__outline2" />
-      </div>
-
-      <div class="mobile-only search">
-        <input type="text" placeholder="Search..." class="search__input mobile-only" />
-        <img src="assets/search.png" class="search__btn icon-img mobile-only" />
-      </div>
-
+    </div>
     </div>
   </header>
 
