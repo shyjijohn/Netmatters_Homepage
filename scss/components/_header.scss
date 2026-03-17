@@ -1,0 +1,185 @@
+.header {
+  // background: red;
+  // height: 20%;
+  width: 100%;
+  // padding: 16px;
+  box-sizing: border-box;
+  // max-width: 1200px;
+  // background-color: blue;
+
+  .container {
+    // background-color: blue;
+    // align-items: stretch; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    // gap: 16px;
+    // justify-content: flex-start;
+  }
+
+  &__pos {
+    // background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    // margin-bottom: 32px;
+    padding: 0px;
+    margin: 0;
+  }
+
+  &__pos-desk {
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-around;
+    // align-items: center;
+    // padding: 16px;
+    background-color: green;
+  }
+
+  .logo {
+    // font-size: 1rem;
+    // font-weight: bold;
+    // text-decoration: none;
+    // color: inherit;
+    height: auto;
+    width: 60%;
+  }
+}
+
+.img-with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  gap: 10px;
+  height: 48px;
+  min-width: 140px;
+  transition: 0.3s;
+
+  &.support {
+    background-color: #337ab7;
+
+    &:hover {
+      background-color: #286090;
+    }
+  }
+
+
+  &.contact {
+    background-color: #999;
+
+    &:hover {
+      background-color: #808080;
+    }
+  }
+
+  img {
+    height: 20px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+}
+
+
+.icon-gap {
+  margin-right: 1px;
+}
+
+// .stretch {
+//   @include stretch-center;
+// }
+
+
+.search__btn-container {
+  background-color: #999;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  border-radius: 0 5px 5px 0; 
+
+  &_img-search {
+    filter: brightness(0) invert(1);
+    width: 20px;
+  }
+}
+
+.search {
+  position: relative;
+  width: 100%;
+  // top: 10%;
+  // max-width: 100%;
+  display: block;
+  padding-top: 20px;
+
+  &__input {
+    width: 100%;
+    padding: 10px 44px 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+
+    &:focus {
+      border-color: #1976d2;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 6px;
+    transform: translateY(10%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 6px;
+    line-height: 1;
+  }
+}
+
+// 🖥️ Desktop screens
+@media (min-width: 768px) {
+  //   .header {
+  //   .container {
+  //     background-color: blue;
+  //     // align-items: stretch; 
+  //     display: flex;
+  //     flex-direction: row;
+  //     justify-content: space-around;
+  //     width: 100%;
+  //     // gap: 16px;
+  //     // justify-content: flex-start; 
+  //   }
+  // }
+
+  .header__pos-desk {
+    //  @include flex-center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    // justify-content: space-between;
+  }
+
+  & .logo {
+    height: 30%;
+    width: 30%;
+  }
+
+
+
+  .search {
+    position: relative;
+    padding: 0px;
+    max-width: 300px;
+  }
+}

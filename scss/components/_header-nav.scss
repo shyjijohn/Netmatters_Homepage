@@ -1,0 +1,184 @@
+.services-nav {
+    background-color: #333645;
+    width: 100vw;
+
+    .services-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-item {
+        flex: 1;
+        text-align: center;
+        transition: 0.3s ease;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 0px;
+            text-decoration: none;
+            color: #fff;
+            height: 100%;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+        small {
+            display: block;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+        span {
+            display: inline;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+
+        // Hover Colors
+        //consultancy
+
+        .consultancy-img {
+            filter: invert(53%) sepia(13%) saturate(1153%) hue-rotate(172deg) brightness(92%) contrast(86%);
+        }
+
+        &.consultancy-img:hover {
+            background-color: #67819f;
+
+            .consultancy-img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .consultancy-a:hover {
+            background-color: #67819f;
+        }
+
+
+        //it-support
+
+        .it-support-img {
+            filter: invert(53%) sepia(35%) saturate(735%) hue-rotate(174deg) brightness(91%) contrast(87%);
+        }
+
+        &:hover {
+            background-color: #4d8ad1;
+
+            .it-support-img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .it-support-a:hover {
+            background-color: #4d8ad1;
+        }
+
+
+        //marketing
+
+        .marketing-img {
+            filter: invert(65%) sepia(82%) saturate(415%) hue-rotate(95deg) brightness(95%) contrast(92%);
+        }
+
+        &:hover {
+            background-color: #2ecc71;
+
+            .marketing-img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .marketing-a:hover {
+            background-color: #2ecc71;
+        }
+
+
+        //telecoms
+
+        .telecoms-img {
+            filter: invert(34%) sepia(54%) saturate(913%) hue-rotate(315deg) brightness(91%) contrast(89%);
+        }
+
+        &:hover {
+            background-color: #d64541;
+
+            .telecoms-img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .telecoms-a:hover {
+            background-color: #d64541;
+        }
+
+
+
+        //web-design
+
+        .web-design-img {
+            filter: invert(43%) sepia(35%) saturate(1048%) hue-rotate(241deg) brightness(87%) contrast(85%);
+        }
+
+        &:hover {
+            background-color: #9b59b6;
+
+            .web-design-img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .web-design-a:hover {
+            background-color: #9b59b6;
+        }
+
+
+
+        //cyber-security
+
+        .cyber-img {
+            filter: invert(59%) sepia(85%) saturate(1633%) hue-rotate(345deg) brightness(94%) contrast(92%);
+        }
+
+        &:hover {
+            background-color: #e67e22;
+
+            .cyber-img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .cyber-a:hover {
+            background-color: #e67e22;
+        }
+
+
+
+        //developer-course
+
+        .developer-img {
+            filter: invert(41%) sepia(82%) saturate(3015%) hue-rotate(341deg) brightness(96%) contrast(90%);
+        }
+
+        &:hover {
+            background-color: #e74c3c;
+
+            .developer-img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .developer-a:hover {
+            background-color: #e74c3c;
+        }
+    }
+}

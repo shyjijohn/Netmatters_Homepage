@@ -1,0 +1,25 @@
+@import "variables";
+@import "mixins";
+@import "buttons";
+
+@import "components/home-page";
+@import "components/header";
+@import "components/header-nav";
+@import "components/banner";
+@import "components/services";
+@import "components/ad";
+@import "components/clients";
+@import "components/latest-news";
+@import "components/footer";
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  width: $max-width;
+  margin: auto;
+}

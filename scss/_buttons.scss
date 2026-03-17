@@ -1,0 +1,62 @@
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: $white;
+  background: $primary-color;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;    
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  
+  &__outline {
+    background: transparent;
+    color: $black;
+    padding: 1px 4px;
+    border: 2px solid $black;
+  }
+
+  &__img {
+    display: inline;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    background: inherit;
+    color: inherit;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background: darken($primary-color, 50%);
+  }
+
+  &__icon {
+    font-size: 18px;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}
+
+
+.btn__outline2 {
+  background-color: #333645; 
+  border: none;              
+  border-radius: 4px;
+  padding: 25px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;              
+  width: 90px;
+  cursor: pointer;
+
+  img {
+    width: 25px;
+    filter: brightness(0) invert(1); 
+  }
+}

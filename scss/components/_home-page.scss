@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // overflow-x: hidden;
+}
+
+// Page 
+.page {
+  min-height: 100vh; 
+  width: 100%;
+  // padding: 0 16px;
+  overflow-x: hidden; 
+  background: #f5f7fa;
+}
+
+@media (min-width: 768px) {
+  .page {
+    max-width: 100%;
+    margin: 0 auto; 
+    padding: 0 40px;
+    width: 100%;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: #{$desktop-max}) {
+  .page {
+    max-width: 70%;
+    margin: 0 auto; 
+    padding: 0 40px;
+    width: 100%;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// responsive
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Prevent long text overflow
+p, h1, h2, h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+// -------------------------------------------------------------------
+
+
+//icon-img
+.icon-img {
+  width: 30px;  
+  height: 30px;
+}
+
+@media (min-width: 768px) {
+  .icon-img {
+    width: 32px;
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .icon-img {
+    width: 36px;
+    height: auto;
+  }
+}
+
+
+// -----------------------------------------------------------------
+
+
+// Responsive container
+.container {
+  width: 100%;
+  // max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 24px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding: 24px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1260px) {
+  .container {
+    padding: 24px;
+    width: 100%;
+  }
+}
+// ----------------------------------------------------------------
+
+
+.mobile-only  { 
+  display: flex ; 
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktop-only {
+    display: flex;
+  }
+  .mobile-only  { 
+    display: none; 
+  }
+}
+
+@media (min-width: 738px) {
+  .desktop-only {
+    display: flex;
+  }
+  .mobile-only  { 
+    display: none; 
+  }
+}

@@ -1,0 +1,221 @@
+.footer {
+  background-color: $footer-bg;
+  color: $text-color;
+  font-family: 'Segoe UI', sans-serif;
+  width: 100vw;
+
+  .container {
+    background-color: black;
+    align-items: stretch;
+    width: 100%;
+    // gap: 16px;
+    margin: 0 auto; 
+    padding: 40px 20px;
+
+  }
+
+
+
+
+  // // Center and fix width for bigger monitors
+  //   @media (min-width: #{$desktop-max}) {
+  //     max-width: 1400px; 
+  //     padding: 0;         
+  //   }
+  // }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 40px;
+      width: 100%;
+    }
+    @media (min-width: #{$desktop-max}) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 17%;
+      // width: 70%;
+    }
+  }
+
+  &__brand {
+    flex: 0 0 350px;
+  }
+
+  &__logo {
+    height: auto;
+    width: 40%;
+    max-width: 100%;
+    margin-bottom: 25px;
+
+    @media (min-width: 1024px) {
+      height: auto;
+      width: 800px;
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+  }
+
+  &__socials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 150px;
+
+    @media (min-width: 992px) {
+      display: flex;
+      max-width: none;
+    }
+
+    .social-box {
+      @include flex-center;
+      background: $social-bg;
+      height: 50px;
+      width: 60px;
+      flex-wrap: nowrap;
+      flex: 0 0 50px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 2px;
+      transition: 0.3s;
+      gap: 10px;
+
+      img {
+        width: 20px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      &:hover {
+        background: lighten($social-bg, 10%);
+      }
+    }
+  }
+
+
+
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-grow: 1;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__menu {
+    h3 {
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 8px;
+
+        a {
+          color: $text-color;
+          text-decoration: none;
+          font-size: 0.85rem;
+
+          &:hover {
+            color: $link-hover;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    background-color: $black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 0;
+    // margin-top: 50px;
+    font-size: 1rem;
+    color: #ccc;
+
+    // @media (max-width: 368px) {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    // }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 10px 40px;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+    }
+
+    @media (min-width: 992px) {
+      // flex-direction: row;
+      // justify-content: space-between;
+      padding: 10px 40px;
+      width: 100%;
+    }
+    @media (min-width: #{$desktop-max}) {
+      // flex-direction: row;
+      // justify-content: space-between;
+      padding: 20px 15%;
+      // width: 70%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// // Desktop laptop layout
+// @media (min-width: #{$laptop-width}) {
+
+//   //   align-items: stretch;
+//   //   padding: 60px 20px;
+//   .container {
+//     // display: flex;
+//     // flex-direction: row;
+//     // justify-content: space-between;
+//     // gap: 50px;
+//     width: 100%;
+//   }
+// }
+
+// // Desktop layout
+// @media (min-width: #{$desktop-max}) {
+
+//   //   align-items: stretch;
+//   //   padding: 60px 20px;
+//   .container {
+//     // display: flex;
+//     // flex-direction: row;
+//     // justify-content: space-between;
+//     // gap: 50px;
+//     width: 70%;
+//   }
+// }

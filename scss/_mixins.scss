@@ -1,0 +1,46 @@
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  // gap: 12px;
+}
+
+@mixin stretch-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  // gap: 12px;
+}
+
+@mixin stretch-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@mixin arrow {
+        margin-left: 8px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+@mixin button-style($primary-color) {
+  background: $primary-color;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
+}
