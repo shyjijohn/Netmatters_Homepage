@@ -16,7 +16,7 @@
 
 @media (min-width: 768px) {
   .page {
-    max-width: 100%;
+    max-width: 1180px;
     margin: 0 auto; 
     padding: 0 40px;
     width: 100%;
@@ -29,9 +29,9 @@
 }
 @media (min-width: #{$desktop-max}) {
   .page {
-    max-width: 70%;
+    max-width: 1180px;
     margin: 0 auto; 
-    padding: 0 40px;
+    // padding: 0 40px;
     width: 100%;
   }
   body{

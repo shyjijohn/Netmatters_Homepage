@@ -28,10 +28,10 @@
 }
 
 @mixin arrow {
-        margin-left: 8px;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
+  margin-left: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
 @mixin button-style($primary-color) {
   background: $primary-color;
@@ -43,4 +43,34 @@
   &:hover {
     background: darken($primary-color, 10%);
   }
+}
+
+@mixin header-nav-a-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  // background-color: #67819f;
+  position: relative;
+}
+
+@mixin header-nav-a-after-style {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -34px;
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 34px 81px 0 82px;
+  // border-color: #67819f transparent transparent transparent;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
