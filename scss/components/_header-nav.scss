@@ -113,10 +113,98 @@
 //   visibility: visible;
 // }
 
-.nav-item-grandparnt:has(.consultancy-a:hover) 
-  .consultancy-hover-section {
-  opacity: 1;
-  visibility: visible;
+
+
+
+// ----------------------------------------------
+
+// Variables
+$bg-color: #4a6a8a; // The slate blue from your image
+$text-color: #ffffff;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// .consultancy-hover-section-old {
+//     position: absolute;
+//     top: 100%;
+//     /* place just below parent */
+//     left: 0;
+//     width: 100vw;
+//     /* hidden by default */
+//     opacity: 0;
+//     visibility: hidden;
+//     transition: 0.3s;
+//     /* full screen width */
+//     //visibility:collapse;
+//     background-color: $bg-color;
+//     color: $text-color;
+//     // align-self: flex-start;
+//     // bottom: 0px;
+//     // width: 100vw;
+//     // // padding: 60px 10%;
+//     // margin: 50px 0;
+//     font-family: $font-family;
+
+.sample-hover-section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.sample-hover-section-grid {
+    display: grid;
+    // Creates 3 equal columns
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 25px;
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr); // 2 columns on tablets
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr; // 1 column on mobile
+    }
+}
+
+.sample-hover-section-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+
+    i {
+        margin-right: 15px;
+        font-size: 1.2rem;
+        opacity: 0.9;
+        width: 25px; // Keeps text aligned even if icons vary in width
+        text-align: center;
+    }
+
+    &:hover {
+        transform: translateX(5px);
+        cursor: pointer;
+    }
+}
+
+// }
+
+
+
+// -------------------------------------------------
+
+
+.nav-item-grandparnt:has(.consultancy-a:hover) .consultancy-hover-section {
+    opacity: 1;
+    visibility: visible;
+    color: white;
+}
+
+.consultancy-hover-section:hover {
+    .consultancy-hover-section {
+        opacity: 1;
+        visibility: visible;
+        color: white;
+    }
 }
 
 .consultancy-a::after {
@@ -136,9 +224,8 @@
     left: 0;
     width: 100vw;
     background-color: #4a6a8a;
-    
-    padding: 100px;
 
+    padding: 60px 10%;
     /* hidden by default */
     opacity: 0;
     visibility: hidden;
@@ -147,87 +234,17 @@
 
 }
 
+// ------------------------------------------------
 
-// ----------------------------------------------
 
-// Variables
-$bg-color: #4a6a8a; // The slate blue from your image
-$text-color: #ffffff;
-$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-.consultancy-hover-section-old {
-    position: absolute;
-    top: 100%;
-    /* place just below parent */
-    left: 0;
-    width: 100vw;
-    /* hidden by default */
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-    /* full screen width */
-    //visibility:collapse;
-    background-color: $bg-color;
-    color: $text-color;
-    // align-self: flex-start;
-    // bottom: 0px;
-    // width: 100vw;
-    // // padding: 60px 10%;
-    // margin: 50px 0;
-    font-family: $font-family;
 
-    // .consultancy-hover-section-title {
-    //     font-size: 2.2rem;
-    //     margin-bottom: 40px;
-    //     font-weight: 500;
-    // }
-
-    // .consultancy-hover-section-grid {
-    //     display: grid;
-    //     // Creates 3 equal columns
-    //     grid-template-columns: repeat(3, 1fr);
-    //     column-gap: 40px;
-    //     row-gap: 25px;
-
-    //     @media (max-width: 992px) {
-    //         grid-template-columns: repeat(2, 1fr); // 2 columns on tablets
-    //     }
-
-    //     @media (max-width: 600px) {
-    //         grid-template-columns: 1fr; // 1 column on mobile
-    //     }
-    // }
-
-    // .consultancy-hover-section-item {
-    //     display: flex;
-    //     align-items: center;
-    //     font-size: 1.1rem;
-    //     transition: transform 0.2s ease;
-
-    //     i {
-    //         margin-right: 15px;
-    //         font-size: 1.2rem;
-    //         opacity: 0.9;
-    //         width: 25px; // Keeps text aligned even if icons vary in width
-    //         text-align: center;
-    //     }
-
-    //     &:hover {
-    //         transform: translateX(5px);
-    //         cursor: pointer;
-    //     }
-    // }
+.nav-item-grandparnt:has(.it-support-a:hover) .it-support-hover-section {
+    opacity: 1;
+    visibility: visible;
+    color: white;
 }
 
-
-
-// -------------------------------------------------
-
-
-.it-support-a:hover {
-    @include header-nav-a-style;
-    background-color: #4d8ad1;
-}
 
 .it-support-a::after {
     @include triangle-style;
@@ -239,10 +256,32 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
-.marketing-a:hover {
-    @include header-nav-a-style;
-    background-color: #2ecc71;
+.it-support-hover-section {
+    position: absolute;
+    top: 100%;
+    /* place just below parent */
+    left: 0;
+    width: 100vw;
+    background-color: #4d8ad1;
+
+    padding: 60px 10%;
+    /* hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+
 }
+
+// ------------------------------------------------------------
+
+
+.nav-item-grandparnt:has(.marketing-a:hover) .marketing-hover-section {
+    opacity: 1;
+    visibility: visible;
+    color: white;
+}
+
 
 .marketing-a::after {
     @include triangle-style;
@@ -254,12 +293,34 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
+.marketing-hover-section {
+    position: absolute;
+    top: 100%;
+    /* place just below parent */
+    left: 0;
+    width: 100vw;
+    background-color: #2ecc71;
+
+    padding: 60px 10%;
+    /* hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
 
 
-.telecoms-a:hover {
-    @include header-nav-a-style;
-    background-color: #d64541;
 }
+
+
+
+// ------------------------------------------------------
+
+
+.nav-item-grandparnt:has(.telecoms-a:hover) .telecoms-hover-section {
+    opacity: 1;
+    visibility: visible;
+    color: white;
+}
+
 
 .telecoms-a::after {
     @include triangle-style;
@@ -271,11 +332,33 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
+.telecoms-hover-section {
+    position: absolute;
+    top: 100%;
+    /* place just below parent */
+    left: 0;
+    width: 100vw;
+    background-color: #d64541;
 
-.web-design-a:hover {
-    @include header-nav-a-style;
-    background-color: #9b59b6;
+    padding: 60px 10%;
+    /* hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+
 }
+
+
+// -----------------------------------------------------------
+
+
+.nav-item-grandparnt:has(.web-design-a:hover) .web-design-hover-section {
+    opacity: 1;
+    visibility: visible;
+    color: white;
+}
+
 
 .web-design-a::after {
     @include triangle-style;
@@ -287,12 +370,33 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
+.web-design-hover-section {
+    position: absolute;
+    top: 100%;
+    /* place just below parent */
+    left: 0;
+    width: 100vw;
+    background-color: #9b59b6;
 
+    padding: 60px 10%;
+    /* hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
 
-.cyber-a:hover {
-    @include header-nav-a-style;
-    background-color: #e67e22;
 }
+
+
+
+
+// -------------------------------------------------------------
+
+.nav-item-grandparnt:has(.cyber-a:hover) .cyber-hover-section {
+    opacity: 1;
+    visibility: visible;
+    color: white;
+}
+
 
 .cyber-a::after {
     @include triangle-style;
@@ -304,11 +408,35 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
+.cyber-hover-section {
+    position: absolute;
+    top: 100%;
+    /* place just below parent */
+    left: 0;
+    width: 100vw;
+    background-color: #e67e22;
 
-.developer-a:hover {
-    @include header-nav-a-style;
-    background-color: #e74c3c;
+    padding: 60px 10%;
+    /* hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+
 }
+
+
+
+// ------------------------------------------------------
+
+
+
+.nav-item-grandparnt:has(.developer-a:hover) .developer-hover-section {
+    opacity: 1;
+    visibility: visible;
+    color: white;
+}
+
 
 .developer-a::after {
     @include triangle-style;
@@ -320,7 +448,26 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
+.developer-hover-section {
+    position: absolute;
+    top: 100%;
+    /* place just below parent */
+    left: 0;
+    width: 100vw;
+    background-color: #e74c3c;
 
+    padding: 60px 10%;
+    /* hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+
+}
+
+
+
+// ----------------------------------------------------------
 
 
 
