@@ -16,9 +16,9 @@
 
 @media (min-width: 768px) {
   .page {
-    max-width: 1180px;
+    max-width: 1200px;
     margin: 0 auto; 
-    padding: 0 40px;
+    // padding: 0 40px;
     width: 100%;
   }
   body{
@@ -29,7 +29,7 @@
 }
 @media (min-width: #{$desktop-max}) {
   .page {
-    max-width: 1180px;
+    max-width: 1200px;
     margin: 0 auto; 
     // padding: 0 40px;
     width: 100%;
@@ -90,21 +90,21 @@ p, h1, h2, h3 {
 
 @media (min-width: 768px) {
   .container {
-    padding: 24px;
+    // padding: 24px;
     width: 100%;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    padding: 24px;
+    // padding: 24px;
     width: 100%;
   }
 }
 
 @media (min-width: 1260px) {
   .container {
-    padding: 24px;
+    // padding: 24px;
     width: 100%;
   }
 }

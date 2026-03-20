@@ -46,19 +46,21 @@
 }
 
 @mixin header-nav-a-style {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0;
-  text-decoration: none;
-  color: #fff;
-  height: 100%;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: flex-start;
+  // padding: 10px 0;
+  // text-decoration: none;
+  // color: #fff;
+  // // height: 100%;
+   width: 164px;
+  // height: 100%;
   // background-color: #67819f;
-  position: relative;
+  // position: relative;
 }
 
-@mixin header-nav-a-after-style {
+@mixin triangle-style {
   content: "";
   position: absolute;
   left: 50%;
@@ -72,5 +74,6 @@
   // border-color: #67819f transparent transparent transparent;
 
   opacity: 0;
+  z-index: 1;
   transition: opacity 0.2s ease;
 }

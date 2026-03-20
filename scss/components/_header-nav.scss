@@ -1,235 +1,493 @@
 .services-nav {
     background-color: #333645;
     width: 100vw;
-    padding: 0 4%;
+    // padding: 0 4%;
+    // padding: 0 20px;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.services-list {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // align-self: center;
+    justify-content: space-between;
+    //background-color: blue;
+    max-height: 100px;
+
+}
+
+@media (min-width: #{$laptop-width}) {
     .services-list {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        // flex-direction: row;
+        // justify-content: space-between;
+        align-self: center;
+        padding: 0 20px;
+        max-width: 1200px;
+        height: 100%;
     }
-        // background-color: blue;
+}
+
+// }
+
+// background-color: blue;
+
+
+// .nav-item {
+//     flex: 1;
+//     text-align: center;
+//     // transition: 0.3s ease;
+//     padding: 10px;
+//     margin: 0;
+//     background-color: red;
+
+
+
+.nav-item-grandparnt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // margin: 10px 10px;
+    // padding: 10px 0;
+    text-decoration: none;
+    // background-color: red;
+    // height: 100%;
+    background-color: red;
+    position: relative;
+    //opacity: 1;
+}
+
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    // margin: 10px 0;
+    // padding: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    // height: 100%;
+    // background-color: #67819f;
+    position: relative;
+
+}
+
+.nav-item-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+    // padding: 10px 0;
+    text-decoration: none;
+    // background-color: red;
+    height: 100%;
+    // background-color: #67819f;
+    // position: relative; 
+}
+
+// .consultancy-a:hover {
+//     // @include header-nav-a-style;
+//     background-color: #67819f;
+
+//     // .consultancy-hover-section {
+//     //     visibility: visible;
+//     //     opacity: 1;
+//     // }
+// }
+
+// .consultancy-a:hover ~ .consultancy-hover-section {
+//   opacity: 1;
+//   visibility: visible;
+// }
+
+// .nav-item-grandparnt:has(.consultancy-a:hover) 
+//   .consultancy-hover-section {
+//   opacity: 1;
+//   visibility: visible;
+// }
+
+.nav-item-grandparnt:has(.consultancy-a:hover) 
+  .consultancy-hover-section {
+  opacity: 1;
+  visibility: visible;
+}
+
+.consultancy-a::after {
+    @include triangle-style;
+    border-color: #67819f transparent transparent transparent;
+}
+
+.consultancy-a:hover::after {
+    opacity: 1;
+}
+
+
+.consultancy-hover-section {
+    position: absolute;
+    top: 100%;
+    /* place just below parent */
+    left: 0;
+    width: 100vw;
+    background-color: #4a6a8a;
+    
+    padding: 100px;
+
+    /* hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+
+}
+
+
+// ----------------------------------------------
+
+// Variables
+$bg-color: #4a6a8a; // The slate blue from your image
+$text-color: #ffffff;
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+.consultancy-hover-section-old {
+    position: absolute;
+    top: 100%;
+    /* place just below parent */
+    left: 0;
+    width: 100vw;
+    /* hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    /* full screen width */
+    //visibility:collapse;
+    background-color: $bg-color;
+    color: $text-color;
+    // align-self: flex-start;
+    // bottom: 0px;
+    // width: 100vw;
+    // // padding: 60px 10%;
+    // margin: 50px 0;
+    font-family: $font-family;
+
+    // .consultancy-hover-section-title {
+    //     font-size: 2.2rem;
+    //     margin-bottom: 40px;
+    //     font-weight: 500;
+    // }
+
+    // .consultancy-hover-section-grid {
+    //     display: grid;
+    //     // Creates 3 equal columns
+    //     grid-template-columns: repeat(3, 1fr);
+    //     column-gap: 40px;
+    //     row-gap: 25px;
+
+    //     @media (max-width: 992px) {
+    //         grid-template-columns: repeat(2, 1fr); // 2 columns on tablets
+    //     }
+
+    //     @media (max-width: 600px) {
+    //         grid-template-columns: 1fr; // 1 column on mobile
+    //     }
+    // }
+
+    // .consultancy-hover-section-item {
+    //     display: flex;
+    //     align-items: center;
+    //     font-size: 1.1rem;
+    //     transition: transform 0.2s ease;
+
+    //     i {
+    //         margin-right: 15px;
+    //         font-size: 1.2rem;
+    //         opacity: 0.9;
+    //         width: 25px; // Keeps text aligned even if icons vary in width
+    //         text-align: center;
+    //     }
 
+    //     &:hover {
+    //         transform: translateX(5px);
+    //         cursor: pointer;
+    //     }
+    // }
+}
 
-        // .nav-item {
-        //     flex: 1;
-        //     text-align: center;
-        //     // transition: 0.3s ease;
-        //     padding: 10px;
-        //     margin: 0;
-        //     background-color: red;
 
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 0;
-            text-decoration: none;
-            color: #fff;
-            height: 100%;
-            // background-color: #67819f;
-            position: relative;
-        }
 
-        .consultancy-a:hover {
-            @include header-nav-a-style;
-            background-color: #67819f;
-        }
+// -------------------------------------------------
 
-        .consultancy-a::after {
-            @include header-nav-a-after-style;
-            border-color: #67819f transparent transparent transparent;
-        }
 
-        .consultancy-a:hover::after {
-            opacity: 1;
-        }
+.it-support-a:hover {
+    @include header-nav-a-style;
+    background-color: #4d8ad1;
+}
 
+.it-support-a::after {
+    @include triangle-style;
+    border-color: #4d8ad1 transparent transparent transparent;
+}
 
+.it-support-a:hover::after {
+    opacity: 1;
+}
 
 
-        .it-support-a:hover {
-            @include header-nav-a-style;
-            background-color: #4d8ad1;
-        }
+.marketing-a:hover {
+    @include header-nav-a-style;
+    background-color: #2ecc71;
+}
 
-        .it-support-a::after {
-            @include header-nav-a-after-style;
-            border-color: #4d8ad1 transparent transparent transparent;
-        }
+.marketing-a::after {
+    @include triangle-style;
+    border-color: #2ecc71 transparent transparent transparent;
+}
 
-        .it-support-a:hover::after {
-            opacity: 1;
-        }
+.marketing-a:hover::after {
+    opacity: 1;
+}
 
 
 
 
-        img {
-            width: 30px;
-            height: 30px;
-            margin-bottom: 10px;
-        }
+.telecoms-a:hover {
+    @include header-nav-a-style;
+    background-color: #d64541;
+}
 
-        small {
-            display: block;
-            font-size: 10px;
-            font-weight: 400;
-        }
+.telecoms-a::after {
+    @include triangle-style;
+    border-color: #d64541 transparent transparent transparent;
+}
 
-        span {
-            display: inline;
-            font-size: 17px;
-            font-weight: 500;
-            line-height: 1.2;
-        }
+.telecoms-a:hover::after {
+    opacity: 1;
+}
 
 
-        // Hover Colors
-        //consultancy
 
-        .consultancy-img {
-            filter: invert(53%) sepia(13%) saturate(1153%) hue-rotate(172deg) brightness(92%) contrast(86%);
-        }
+.web-design-a:hover {
+    @include header-nav-a-style;
+    background-color: #9b59b6;
+}
 
-        &:hover {
-            background-color: #67819f;
-            padding: 0;
+.web-design-a::after {
+    @include triangle-style;
+    border-color: #9b59b6 transparent transparent transparent;
+}
 
+.web-design-a:hover::after {
+    opacity: 1;
+}
 
-            .consultancy-img {
-                filter: brightness(0) invert(1);
-            }
-        }
 
-        //it-support
 
-        .it-support-img {
-            filter: invert(53%) sepia(35%) saturate(735%) hue-rotate(174deg) brightness(91%) contrast(87%);
-        }
 
-        &:hover {
-            background-color: #4d8ad1;
-            padding: 0;
+.cyber-a:hover {
+    @include header-nav-a-style;
+    background-color: #e67e22;
+}
 
-            .it-support-img {
-                filter: brightness(0) invert(1);
-            }
-        }
+.cyber-a::after {
+    @include triangle-style;
+    border-color: #e67e22 transparent transparent transparent;
+}
 
-        .it-support-a:hover {
-            background-color: #4d8ad1;
-            border-radius: 0px;
-            border: 0px solid #000000;
-        }
+.cyber-a:hover::after {
+    opacity: 1;
+}
 
 
-        //marketing
 
-        .marketing-img {
-            filter: invert(65%) sepia(82%) saturate(415%) hue-rotate(95deg) brightness(95%) contrast(92%);
-        }
+.developer-a:hover {
+    @include header-nav-a-style;
+    background-color: #e74c3c;
+}
 
-        &:hover {
-            background-color: #2ecc71;
-            padding: 0;
+.developer-a::after {
+    @include triangle-style;
+    border-color: #e74c3c transparent transparent transparent;
+}
 
-            .marketing-img {
-                filter: brightness(0) invert(1);
-            }
-        }
+.developer-a:hover::after {
+    opacity: 1;
+}
 
-        .marketing-a:hover {
-            background-color: #2ecc71;
-        }
 
 
-        //telecoms
 
-        .telecoms-img {
-            filter: invert(34%) sepia(54%) saturate(913%) hue-rotate(315deg) brightness(91%) contrast(89%);
-        }
 
-        &:hover {
-            background-color: #d64541;
-            padding: 0;
 
-            .telecoms-img {
-                filter: brightness(0) invert(1);
-            }
-        }
 
-        .telecoms-a:hover {
-            background-color: #d64541;
-        }
 
+img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
 
+small {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+}
 
-        //web-design
+span {
+    display: inline;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.2;
+}
 
-        .web-design-img {
-            filter: invert(43%) sepia(35%) saturate(1048%) hue-rotate(241deg) brightness(87%) contrast(85%);
-        }
 
-        &:hover {
-            background-color: #9b59b6;
-            padding: 0;
+// Hover Colors
+//consultancy
 
+.consultancy-img {
+    filter: invert(53%) sepia(13%) saturate(1153%) hue-rotate(172deg) brightness(92%) contrast(86%);
+}
 
-            .web-design-img {
-                filter: brightness(0) invert(1);
-            }
-        }
+.consultancy-a:hover {
+    background-color: #67819f;
+    padding: 0;
 
-        .web-design-a:hover {
-            background-color: #9b59b6;
-        }
 
-
-
-        //cyber-security
-
-        .cyber-img {
-            filter: invert(59%) sepia(85%) saturate(1633%) hue-rotate(345deg) brightness(94%) contrast(92%);
-        }
-
-        &:hover {
-            background-color: #e67e22;
-            padding: 0;
-
-
-            .cyber-img {
-                filter: brightness(0) invert(1);
-            }
-        }
-
-        .cyber-a:hover {
-            background-color: #e67e22;
-        }
-
-
-
-        //developer-course
-
-        .developer-img {
-            filter: invert(41%) sepia(82%) saturate(3015%) hue-rotate(341deg) brightness(96%) contrast(90%);
-        }
-
-        &:hover {
-            background-color: #e74c3c;
-            padding: 0;
-
-
-            .developer-img {
-                filter: brightness(0) invert(1);
-            }
-        }
-
-        .developer-a:hover {
-            background-color: #e74c3c;
-        }
+    .consultancy-img {
+        filter: brightness(0) invert(1);
     }
+}
+
+//it-support
+
+.it-support-img {
+    filter: invert(53%) sepia(35%) saturate(735%) hue-rotate(174deg) brightness(91%) contrast(87%);
+}
+
+.it-support-a:hover {
+    background-color: #4d8ad1;
+    padding: 0;
+
+    .it-support-img {
+        filter: brightness(0) invert(1);
+    }
+}
+
+// .it-support-a:hover {
+//     background-color: #4d8ad1;
+//     border-radius: 0px;
+//     border: 0px solid #000000;
+// }
+
+
+//marketing
+
+.marketing-img {
+    filter: invert(65%) sepia(82%) saturate(415%) hue-rotate(95deg) brightness(95%) contrast(92%);
+}
+
+.marketing-a:hover {
+    background-color: #2ecc71;
+    padding: 0;
+
+    .marketing-img {
+        filter: brightness(0) invert(1);
+    }
+}
+
+// .marketing-a:hover {
+//     background-color: #2ecc71;
+// }
+
+
+//telecoms
+
+.telecoms-img {
+    filter: invert(34%) sepia(54%) saturate(913%) hue-rotate(315deg) brightness(91%) contrast(89%);
+}
+
+.telecoms-a:hover {
+    background-color: #d64541;
+    padding: 0;
+
+    .telecoms-img {
+        filter: brightness(0) invert(1);
+    }
+}
+
+.telecoms-a:hover {
+    background-color: #d64541;
+}
+
+
+
+//web-design
+
+.web-design-img {
+    filter: invert(43%) sepia(35%) saturate(1048%) hue-rotate(241deg) brightness(87%) contrast(85%);
+}
+
+.web-design-a:hover {
+    background-color: #9b59b6;
+    padding: 0;
+
+
+    .web-design-img {
+        filter: brightness(0) invert(1);
+    }
+}
+
+.web-design-a:hover {
+    background-color: #9b59b6;
+}
+
+
+
+//cyber-security
+
+.cyber-img {
+    filter: invert(59%) sepia(85%) saturate(1633%) hue-rotate(345deg) brightness(94%) contrast(92%);
+}
+
+.cyber-a:hover {
+    background-color: #e67e22;
+    padding: 0;
+
+
+    .cyber-img {
+        filter: brightness(0) invert(1);
+    }
+}
+
+.cyber-a:hover {
+    background-color: #e67e22;
+}
+
+
+
+//developer-course
+
+.developer-img {
+    filter: invert(41%) sepia(82%) saturate(3015%) hue-rotate(341deg) brightness(96%) contrast(90%);
+}
+
+.developer-a:hover {
+    background-color: #e74c3c;
+    padding: 0;
+
+
+    .developer-img {
+        filter: brightness(0) invert(1);
+    }
+}
+
+.developer-a:hover {
+    background-color: #e74c3c;
+}
+
+// }

@@ -1,13 +1,24 @@
 .latest-news {
 //   padding: 50px 20px;
-  background-color: #fff;
+  // background-color: #fff;
 
-   .container {
+   .latest-news-container {
     // background-color: yellow;
     // align-items: stretch; 
     width: 100%;
     gap: 16px;
+    padding: 30px 15px;
     // justify-content: flex-start; 
+  }
+
+
+@media (min-width: #{$laptop-width}) {
+    .latest-news-container {
+      // padding: 10px 40px;
+      padding: 30px 0px;
+      margin: 0;
+      max-width: 1200px;
+    }
   }
 }
 

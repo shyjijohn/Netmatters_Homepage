@@ -3,15 +3,39 @@
   color: $text-color;
   font-family: 'Segoe UI', sans-serif;
   width: 100vw;
+  background-color: #323544;
+
+
 
   .container {
     // background-color: black;
     align-items: stretch;
     width: 100%;
     // gap: 16px;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding: 20px 20px;
     background-color: #323544;
+
+
+  }
+
+  @media (min-width: #{$laptop-width}) {
+    .container {
+      // flex-direction: row;
+      // justify-content: space-between;
+      padding: 0;
+      max-width: 1200px;
+    }
+  }
+
+  @media (min-width: #{$desktop-max}) {
+    .container {
+      // flex-direction: row;
+      // justify-content: space-between;
+      padding: 0;
+      max-width: 1200px;
+      // width: 70%;
+    }
   }
 
 
@@ -29,16 +53,17 @@
     flex-direction: column;
     gap: 30px;
 
-    @media (min-width: 992px) {
+    @media (min-width: #{$laptop-width}) {
       flex-direction: row;
       justify-content: space-between;
-      padding: 10px 40px;
+      // padding: 10px 40px;
       width: 100%;
     }
+
     @media (min-width: #{$desktop-max}) {
       flex-direction: row;
       justify-content: space-between;
-      padding: 0 17%;
+      // padding: 0 17%;
       // width: 70%;
     }
   }
@@ -53,9 +78,9 @@
     max-width: 100%;
     margin-bottom: 25px;
 
-    @media (min-width: 1024px) {
+    @media (min-width: #{$laptop-width}) {
       height: auto;
-      width: 800px;
+      width: 1000px;
       max-width: 100%;
     }
   }
@@ -72,7 +97,7 @@
     gap: 10px;
     max-width: 150px;
 
-    @media (min-width: 992px) {
+    @media (min-width: #{$laptop-width}) {
       display: flex;
       max-width: none;
     }
@@ -113,7 +138,7 @@
     gap: 30px;
     flex-grow: 1;
 
-    @media (min-width: 768px) {
+    @media (min-width: #{$laptop-width}) {
       flex-direction: row;
       justify-content: space-evenly;
     }
@@ -150,7 +175,7 @@
     background-color: $black;
     display: flex;
     flex-wrap: wrap;
-    padding: 5px 20px;
+    // padding: 5px 20px;
     // margin-top: 50px;
     font-size: 1rem;
     color: #ccc;
@@ -160,26 +185,27 @@
     //   flex-wrap: wrap;
     // }
 
-    @media (min-width: 768px) {
+    @media (min-width: #{$laptop-width}) {
       .container {
-        padding: 10px 40px;
+        // padding: 10px 40px;
         display: flex;
         flex-wrap: nowrap;
+        max-width: 1200px;
       }
     }
 
-    @media (min-width: 992px) {
-      // flex-direction: row;
-      // justify-content: space-between;
-      padding: 10px 40px;
-      width: 100%;
-    }
-    @media (min-width: #{$desktop-max}) {
-      // flex-direction: row;
-      // justify-content: space-between;
-      padding: 20px 15%;
-      // width: 70%;
-    }
+    // @media (min-width: 992px) {
+    //   // flex-direction: row;
+    //   // justify-content: space-between;
+    //   padding: 10px 40px;
+    //   width: 100%;
+    // }
+    // @media (min-width: #{$desktop-max}) {
+    //   // flex-direction: row;
+    //   // justify-content: space-between;
+    //   padding: 20px 15%;
+    //   // width: 70%;
+    // }
 
     a {
       color: inherit;

@@ -47,7 +47,7 @@
 
 
 //  Desktop screens
-@media (min-width: 768px) {
+@media (min-width: #{$laptop-width}) {
   .banner {
       h1{
         font-size: 48px;
@@ -58,7 +58,7 @@
     }
     
     .container {
-      // padding: 40px 0;
+      padding: 0px;
       // width: fit-content;
       max-width: 1200px;
       display: flex;
