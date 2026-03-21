@@ -193,26 +193,76 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 // -------------------------------------------------
 
 
-.nav-item-grandparnt:has(.consultancy-a:hover) .consultancy-hover-section {
-    opacity: 1;
-    visibility: visible;
-    color: white;
+// .nav-item-grandparnt:has(.consultancy-a:hover) 
+// .consultancy-hover-section {
+//     opacity: 1;
+//     visibility: visible;
+//     color: white;
+// }
+
+
+// .consultancy-hover-section:hover {
+//     .consultancy-hover-section {
+//     opacity: 1;
+//     visibility: visible;
+//     color: white;
+// }
+// .consultancy-a {
+//     visibility: visible;
+//     width: 165px;
+//     background-color: #67819f;
+//     padding: 0;
+
+
+//     .consultancy-img {
+//         filter: brightness(0) invert(1);
+//     }
+//     //  border : 3px solid blue;
+// }
+// }
+
+
+
+// .consultancy-hover-section:hover {
+//     .consultancy-hover-section {
+//         opacity: 1;
+//         visibility: visible;
+//         color: white;
+//     }
+// }
+
+// .nav-item-grandparnt:has(.consultancy-a:hover),
+// .nav-item-grandparnt:has(.consultancy-hover-section:hover) {
+// }
+
+/* Show panel */
+.nav-item-grandparnt:has(.consultancy-a:hover) .consultancy-hover-section,
+.nav-item-grandparnt:has(.consultancy-hover-section:hover) .consultancy-hover-section {
+  opacity: 1;
+  visibility: visible;
+  color: white;
 }
 
-.consultancy-hover-section:hover {
-    .consultancy-hover-section {
-        opacity: 1;
-        visibility: visible;
-        color: white;
-    }
+/* Keep tile highlighted */
+
+.nav-item-grandparnt:has(.consultancy-hover-section:hover) .consultancy-a {
+  background-color: #67819f;
 }
+
+.nav-item-grandparnt:has(.consultancy-hover-section:hover) .consultancy-a .consultancy-img {
+  filter: brightness(0) invert(1);
+}
+
 
 .consultancy-a::after {
     @include triangle-style;
     border-color: #67819f transparent transparent transparent;
-}
+} 
 
-.consultancy-a:hover::after {
+.nav-item-grandparnt:has(.consultancy-hover-section:hover, 
+                         .consultancy-hover-section *:hover,
+                         .consultancy-a:hover)
+.consultancy-a::after {
     opacity: 1;
 }
 
@@ -229,9 +279,32 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* hidden by default */
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s;
+    // transition: 0.3s;
 
 
+}
+
+
+// Hover Colors
+//consultancy
+
+.consultancy-img {
+    filter: invert(53%) sepia(13%) saturate(1153%) hue-rotate(172deg) brightness(92%) contrast(86%);
+}
+
+.consultancy-a {
+    width: 165px;
+    //  border : 3px solid blue;
+}
+
+.consultancy-a:hover {
+    background-color: #67819f;
+    padding: 0;
+
+
+    .consultancy-img {
+        filter: brightness(0) invert(1);
+    }
 }
 
 // ------------------------------------------------
@@ -272,6 +345,8 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 
 }
+
+// Hover Colors
 
 // ------------------------------------------------------------
 
@@ -493,27 +568,17 @@ span {
 }
 
 
-// Hover Colors
-//consultancy
-
-.consultancy-img {
-    filter: invert(53%) sepia(13%) saturate(1153%) hue-rotate(172deg) brightness(92%) contrast(86%);
-}
-
-.consultancy-a:hover {
-    background-color: #67819f;
-    padding: 0;
-
-
-    .consultancy-img {
-        filter: brightness(0) invert(1);
-    }
-}
 
 //it-support
 
 .it-support-img {
     filter: invert(53%) sepia(35%) saturate(735%) hue-rotate(174deg) brightness(91%) contrast(87%);
+}
+
+.it-support-a {
+    width: 165px;
+    // border: 3px solid blue;
+
 }
 
 .it-support-a:hover {
@@ -538,6 +603,13 @@ span {
     filter: invert(65%) sepia(82%) saturate(415%) hue-rotate(95deg) brightness(95%) contrast(92%);
 }
 
+
+.marketing-a {
+    width: 165px;
+    // border: 3px solid blue;
+
+}
+
 .marketing-a:hover {
     background-color: #2ecc71;
     padding: 0;
@@ -556,6 +628,11 @@ span {
 
 .telecoms-img {
     filter: invert(34%) sepia(54%) saturate(913%) hue-rotate(315deg) brightness(91%) contrast(89%);
+}
+
+.telecoms-a {
+    width: 165px;
+    // border: 3px solid blue;
 }
 
 .telecoms-a:hover {
@@ -577,6 +654,11 @@ span {
 
 .web-design-img {
     filter: invert(43%) sepia(35%) saturate(1048%) hue-rotate(241deg) brightness(87%) contrast(85%);
+}
+
+.web-design-a {
+    width: 165px;
+    // border: 3px solid blue;
 }
 
 .web-design-a:hover {
@@ -601,6 +683,11 @@ span {
     filter: invert(59%) sepia(85%) saturate(1633%) hue-rotate(345deg) brightness(94%) contrast(92%);
 }
 
+.cyber-a {
+    width: 165px;
+    // border: 3px solid blue;
+}
+
 .cyber-a:hover {
     background-color: #e67e22;
     padding: 0;
@@ -621,6 +708,12 @@ span {
 
 .developer-img {
     filter: invert(41%) sepia(82%) saturate(3015%) hue-rotate(341deg) brightness(96%) contrast(90%);
+}
+
+
+.developer-a {
+    width: 165px;
+    // border: 3px solid blue;
 }
 
 .developer-a:hover {
