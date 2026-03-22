@@ -196,7 +196,7 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     font-size: 1.1rem;
-    transition: transform 0.2s ease;
+    // transition: transform 0.2s ease;
 
     i {
         margin-right: 15px;
@@ -207,7 +207,8 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     &:hover {
-        transform: translateX(5px);
+        // transform: translateX(5px);
+        text-decoration: underline;
         cursor: pointer;
     }
 }
