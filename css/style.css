@@ -495,14 +495,14 @@ span {
   line-height: 1.2;
 }
 
-/* line 173, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 172, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .sample-hover-section-title {
   font-size: 2.2rem;
   margin-bottom: 40px;
   font-weight: 500;
 }
 
-/* line 179, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 178, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .sample-hover-section-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -511,27 +511,27 @@ span {
 }
 
 @media (max-width: 992px) {
-  /* line 179, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+  /* line 178, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
   .sample-hover-section-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  /* line 179, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+  /* line 178, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
   .sample-hover-section-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* line 195, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 194, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .sample-hover-section-item {
   display: flex;
   align-items: center;
   font-size: 1.1rem;
 }
 
-/* line 201, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 200, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .sample-hover-section-item i {
   margin-right: 15px;
   font-size: 1.2rem;
@@ -540,13 +540,13 @@ span {
   text-align: center;
 }
 
-/* line 209, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 208, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .sample-hover-section-item:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 273, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 272, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.consultancy-a:hover) .consultancy-hover-section,
 .nav-item-grandparnt:has(.consultancy-hover-section:hover) .consultancy-hover-section {
   opacity: 1;
@@ -554,18 +554,18 @@ span {
   color: white;
 }
 
-/* line 281, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 280, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.consultancy-hover-section:hover) .consultancy-a {
   background-color: #67819f;
   padding: 0;
 }
 
-/* line 285, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 284, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.consultancy-hover-section:hover) .consultancy-a .consultancy-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 291, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 290, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.consultancy-hover-section:hover,
 .consultancy-hover-section *:hover,
 .consultancy-a:hover)
@@ -574,12 +574,12 @@ span {
   z-index: 50;
 }
 
-/* line 300, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 299, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .consultancy-a {
   width: 165px;
 }
 
-/* line 302, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 301, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .consultancy-a::after {
   content: "";
   position: absolute;
@@ -597,18 +597,18 @@ span {
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
 }
 
-/* line 308, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 307, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .consultancy-a:hover {
   background-color: #67819f;
   padding: 0;
 }
 
-/* line 311, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 310, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .consultancy-a:hover .consultancy-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 318, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 317, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .consultancy-hover-section {
   position: absolute;
   top: 100%;
@@ -621,12 +621,12 @@ span {
   transition: 0.3s;
 }
 
-/* line 337, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 336, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .consultancy-img {
   filter: invert(53%) sepia(13%) saturate(1153%) hue-rotate(172deg) brightness(92%) contrast(86%);
 }
 
-/* line 273, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 272, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.it-support-a:hover) .it-support-hover-section,
 .nav-item-grandparnt:has(.it-support-hover-section:hover) .it-support-hover-section {
   opacity: 1;
@@ -634,18 +634,18 @@ span {
   color: white;
 }
 
-/* line 281, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 280, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.it-support-hover-section:hover) .it-support-a {
   background-color: #4d8ad1;
   padding: 0;
 }
 
-/* line 285, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 284, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.it-support-hover-section:hover) .it-support-a .it-support-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 291, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 290, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.it-support-hover-section:hover,
 .it-support-hover-section *:hover,
 .it-support-a:hover)
@@ -654,12 +654,12 @@ span {
   z-index: 50;
 }
 
-/* line 300, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 299, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .it-support-a {
   width: 165px;
 }
 
-/* line 302, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 301, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .it-support-a::after {
   content: "";
   position: absolute;
@@ -677,18 +677,18 @@ span {
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
 }
 
-/* line 308, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 307, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .it-support-a:hover {
   background-color: #4d8ad1;
   padding: 0;
 }
 
-/* line 311, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 310, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .it-support-a:hover .it-support-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 318, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 317, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .it-support-hover-section {
   position: absolute;
   top: 100%;
@@ -701,12 +701,12 @@ span {
   transition: 0.3s;
 }
 
-/* line 341, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 340, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .it-support-img {
   filter: invert(53%) sepia(35%) saturate(735%) hue-rotate(174deg) brightness(91%) contrast(87%);
 }
 
-/* line 273, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 272, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.marketing-a:hover) .marketing-hover-section,
 .nav-item-grandparnt:has(.marketing-hover-section:hover) .marketing-hover-section {
   opacity: 1;
@@ -714,18 +714,18 @@ span {
   color: white;
 }
 
-/* line 281, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 280, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.marketing-hover-section:hover) .marketing-a {
   background-color: #2ecc71;
   padding: 0;
 }
 
-/* line 285, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 284, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.marketing-hover-section:hover) .marketing-a .marketing-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 291, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 290, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.marketing-hover-section:hover,
 .marketing-hover-section *:hover,
 .marketing-a:hover)
@@ -734,12 +734,12 @@ span {
   z-index: 50;
 }
 
-/* line 300, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 299, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .marketing-a {
   width: 165px;
 }
 
-/* line 302, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 301, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .marketing-a::after {
   content: "";
   position: absolute;
@@ -757,18 +757,18 @@ span {
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
 }
 
-/* line 308, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 307, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .marketing-a:hover {
   background-color: #2ecc71;
   padding: 0;
 }
 
-/* line 311, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 310, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .marketing-a:hover .marketing-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 318, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 317, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .marketing-hover-section {
   position: absolute;
   top: 100%;
@@ -781,12 +781,12 @@ span {
   transition: 0.3s;
 }
 
-/* line 345, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 344, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .marketing-img {
   filter: invert(65%) sepia(82%) saturate(415%) hue-rotate(95deg) brightness(95%) contrast(92%);
 }
 
-/* line 273, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 272, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.telecoms-a:hover) .telecoms-hover-section,
 .nav-item-grandparnt:has(.telecoms-hover-section:hover) .telecoms-hover-section {
   opacity: 1;
@@ -794,18 +794,18 @@ span {
   color: white;
 }
 
-/* line 281, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 280, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.telecoms-hover-section:hover) .telecoms-a {
   background-color: #d64541;
   padding: 0;
 }
 
-/* line 285, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 284, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.telecoms-hover-section:hover) .telecoms-a .telecoms-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 291, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 290, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.telecoms-hover-section:hover,
 .telecoms-hover-section *:hover,
 .telecoms-a:hover)
@@ -814,12 +814,12 @@ span {
   z-index: 50;
 }
 
-/* line 300, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 299, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .telecoms-a {
   width: 165px;
 }
 
-/* line 302, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 301, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .telecoms-a::after {
   content: "";
   position: absolute;
@@ -837,18 +837,18 @@ span {
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
 }
 
-/* line 308, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 307, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .telecoms-a:hover {
   background-color: #d64541;
   padding: 0;
 }
 
-/* line 311, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 310, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .telecoms-a:hover .telecoms-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 318, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 317, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .telecoms-hover-section {
   position: absolute;
   top: 100%;
@@ -861,12 +861,12 @@ span {
   transition: 0.3s;
 }
 
-/* line 349, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 348, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .telecoms-img {
   filter: invert(34%) sepia(54%) saturate(913%) hue-rotate(315deg) brightness(91%) contrast(89%);
 }
 
-/* line 273, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 272, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.web-design-a:hover) .web-design-hover-section,
 .nav-item-grandparnt:has(.web-design-hover-section:hover) .web-design-hover-section {
   opacity: 1;
@@ -874,18 +874,18 @@ span {
   color: white;
 }
 
-/* line 281, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 280, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.web-design-hover-section:hover) .web-design-a {
   background-color: #9b59b6;
   padding: 0;
 }
 
-/* line 285, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 284, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.web-design-hover-section:hover) .web-design-a .web-design-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 291, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 290, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.web-design-hover-section:hover,
 .web-design-hover-section *:hover,
 .web-design-a:hover)
@@ -894,12 +894,12 @@ span {
   z-index: 50;
 }
 
-/* line 300, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 299, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .web-design-a {
   width: 165px;
 }
 
-/* line 302, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 301, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .web-design-a::after {
   content: "";
   position: absolute;
@@ -917,18 +917,18 @@ span {
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
 }
 
-/* line 308, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 307, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .web-design-a:hover {
   background-color: #9b59b6;
   padding: 0;
 }
 
-/* line 311, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 310, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .web-design-a:hover .web-design-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 318, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 317, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .web-design-hover-section {
   position: absolute;
   top: 100%;
@@ -941,12 +941,12 @@ span {
   transition: 0.3s;
 }
 
-/* line 353, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 352, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .web-design-img {
   filter: invert(43%) sepia(35%) saturate(1048%) hue-rotate(241deg) brightness(87%) contrast(85%);
 }
 
-/* line 273, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 272, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.cyber-a:hover) .cyber-hover-section,
 .nav-item-grandparnt:has(.cyber-hover-section:hover) .cyber-hover-section {
   opacity: 1;
@@ -954,18 +954,18 @@ span {
   color: white;
 }
 
-/* line 281, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 280, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.cyber-hover-section:hover) .cyber-a {
   background-color: #e67e22;
   padding: 0;
 }
 
-/* line 285, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 284, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.cyber-hover-section:hover) .cyber-a .cyber-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 291, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 290, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.cyber-hover-section:hover,
 .cyber-hover-section *:hover,
 .cyber-a:hover)
@@ -974,12 +974,12 @@ span {
   z-index: 50;
 }
 
-/* line 300, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 299, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .cyber-a {
   width: 165px;
 }
 
-/* line 302, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 301, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .cyber-a::after {
   content: "";
   position: absolute;
@@ -997,18 +997,18 @@ span {
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
 }
 
-/* line 308, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 307, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .cyber-a:hover {
   background-color: #e67e22;
   padding: 0;
 }
 
-/* line 311, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 310, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .cyber-a:hover .cyber-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 318, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 317, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .cyber-hover-section {
   position: absolute;
   top: 100%;
@@ -1021,12 +1021,12 @@ span {
   transition: 0.3s;
 }
 
-/* line 357, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 356, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .cyber-img {
   filter: invert(59%) sepia(85%) saturate(1633%) hue-rotate(345deg) brightness(94%) contrast(92%);
 }
 
-/* line 273, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 272, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.developer-a:hover) .developer-hover-section,
 .nav-item-grandparnt:has(.developer-hover-section:hover) .developer-hover-section {
   opacity: 1;
@@ -1034,18 +1034,18 @@ span {
   color: white;
 }
 
-/* line 281, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 280, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.developer-hover-section:hover) .developer-a {
   background-color: #e74c3c;
   padding: 0;
 }
 
-/* line 285, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 284, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.developer-hover-section:hover) .developer-a .developer-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 291, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 290, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .nav-item-grandparnt:has(.developer-hover-section:hover,
 .developer-hover-section *:hover,
 .developer-a:hover)
@@ -1054,12 +1054,12 @@ span {
   z-index: 50;
 }
 
-/* line 300, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 299, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .developer-a {
   width: 165px;
 }
 
-/* line 302, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 301, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .developer-a::after {
   content: "";
   position: absolute;
@@ -1077,18 +1077,18 @@ span {
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
 }
 
-/* line 308, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 307, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .developer-a:hover {
   background-color: #e74c3c;
   padding: 0;
 }
 
-/* line 311, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 310, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .developer-a:hover .developer-img {
   filter: brightness(0) invert(1);
 }
 
-/* line 318, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 317, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .developer-hover-section {
   position: absolute;
   top: 100%;
@@ -1101,7 +1101,7 @@ span {
   transition: 0.3s;
 }
 
-/* line 361, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
+/* line 360, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_header-nav.scss */
 .developer-img {
   filter: invert(41%) sepia(82%) saturate(3015%) hue-rotate(341deg) brightness(96%) contrast(90%);
 }
@@ -1135,7 +1135,7 @@ span {
 
 /* line 28, ../../../OneDrive/Documents/UK/Netmatters-doc/Assessments/Netmatters_Homepage/scss/components/_banner.scss */
 .banner p {
-  font-size: 22px;
+  font-size: 20px;
   margin: 20px 0;
 }
 
@@ -1250,7 +1250,7 @@ span {
   border: 1px solid white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
-  padding: 30px 20px;
+  padding: 30px 30px;
   text-align: center;
   margin: 0;
   top: 0;
