@@ -2,39 +2,52 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
+  // background-color: red;
+  // border: 5px solid black;
   // overflow-x: hidden;
 }
 
 // Page 
 .page {
-  min-height: 100vh; 
+      // background-color: red;
+
+  min-height: 100vh;
   width: 100%;
   // padding: 0 16px;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   background: #f5f7fa;
+  // background-color: blue;
+  // border: 5px solid black;
 }
 
 @media (min-width: 768px) {
   .page {
+    // background-color: red;
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
     // padding: 0 40px;
     width: 100%;
   }
-  body{
+
+  body {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
+
 @media (min-width: #{$desktop-max}) {
   .page {
+        // background-color: red;
+
     max-width: 1200px;
-    margin: 0 auto; 
-    // padding: 0 40px;
+    margin: 0 auto;
+    padding: 0;
     width: 100%;
   }
-  body{
+
+  body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,23 +55,28 @@
 }
 
 // responsive
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
 // Prevent long text overflow
-p, h1, h2, h3 {
+p,
+h1,
+h2,
+h3 {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
 // -------------------------------------------------------------------
 
 
 //icon-img
 .icon-img {
-  width: 30px;  
+  width: 30px;
   height: 30px;
 }
 
@@ -82,6 +100,7 @@ p, h1, h2, h3 {
 
 // Responsive container
 .container {
+  // background-color: violet;
   width: 100%;
   // max-width: 1200px;
   margin: 0 auto;
@@ -106,16 +125,22 @@ p, h1, h2, h3 {
   .container {
     // padding: 24px;
     width: 100%;
+    max-width: 1200px;
   }
 }
+
 // ----------------------------------------------------------------
 
 
-.mobile-only  { 
-  display: flex ; 
+.mobile-only {
+  display: flex;
 }
 
 .desktop-only {
+  display: none;
+}
+
+.desktop-large-only {
   display: none;
 }
 
@@ -123,8 +148,9 @@ p, h1, h2, h3 {
   .desktop-only {
     display: flex;
   }
-  .mobile-only  { 
-    display: none; 
+
+  .mobile-only {
+    display: none;
   }
 }
 
@@ -132,8 +158,14 @@ p, h1, h2, h3 {
   .desktop-only {
     display: flex;
   }
-  .mobile-only  { 
-    display: none; 
+
+  .desktop-large-only {
+    display: flex;
+    // max-width: 1200px;
+    // width: 100%;
+  }
+
+  .mobile-only {
+    display: none;
   }
 }
-

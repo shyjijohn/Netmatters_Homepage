@@ -1,26 +1,41 @@
 .latest-news {
-//   padding: 50px 20px;
+  //   padding: 50px 20px;
   // background-color: #fff;
+  font-family: $font-family;
 
-   .latest-news-container {
+  .container {
     // background-color: yellow;
     // align-items: stretch; 
     width: 100%;
     gap: 16px;
     padding: 30px 15px;
+    // min-height: 900px;
     // justify-content: flex-start; 
   }
 
 
-@media (min-width: #{$laptop-width}) {
-    .latest-news-container {
+  @media (min-width: #{$laptop-width}) {
+    .container {
       // padding: 10px 40px;
+      width: 100%;
       padding: 30px 0px;
       margin: 0;
       max-width: 1200px;
     }
   }
 }
+
+
+@media (max-width: 767px) {
+  .news-header .view-all-desktop {
+    display: none;
+  }
+
+  .view-all-mobile {
+    display: block;
+  }
+}
+
 
 .news-header {
   @include flex-between;
@@ -39,45 +54,59 @@
     color: $color-primary;
     font-weight: bold;
     font-size: 1.6rem;
-    &:hover { border-bottom: 2px solid $color-primary; }
+
+    &:hover {
+      border-bottom: 2px solid $color-primary;
+    }
   }
 }
 
-.view-all-mobile{
-    // display: none;
-    text-decoration: none;
-    color: $color-primary;
-    font-weight: bold;
-    font-size: 1.6rem;
-    margin-top: 20px;
-    padding: 0 25%;
-    &:hover { border-bottom: 2px solid $color-primary; }
+.view-all-mobile {
+  // display: none;
+  text-decoration: none;
+  color: $color-primary;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-top: 20px;
+  padding: 0;
 
-    // @media (max-width: 767px) {
-    //   display: inline-block;
-    // }
+  &:hover {
+    border-bottom: 2px solid $color-primary;
+  }
+
+  // @media (max-width: 767px) {
+  //   display: inline-block;
+  // }
 }
+
 // Grid Layout
 .news-grid {
-  display: flex;
-  flex-direction: column; 
+  display: grid;
+  grid-template-columns: 1fr; // mobile first
   gap: 30px;
 
   @media (min-width: 768px) {
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr); // tablet
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr); // desktop
   }
 }
 
 // Individual Card
 .news-card {
-  flex: 1;
+  // flex: 1 1 300px;
+  min-width: 0;
+  padding: 10px;
   background: $color-white;
   border: 1px solid $border-color;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
+  height: 100%;
   top: 0;
   transition: transform 0.5s ease;
 
@@ -94,15 +123,16 @@
     height: 250px;
 
     img {
-      width: auto;
-      height: auto;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
 
     .tag {
       position: absolute;
       top: 10px;
-      right: 10px;
+      right: 0px;
+      transform: none;
       background: #67809f;
       color: white;
       padding: 4px 8px;
@@ -114,32 +144,34 @@
       // background: red;
       position: absolute;
       top: 10px;
-      right: 10px;
+      right: 0px;
+      transform: none;
       background: #4183d7;
       color: white;
       padding: 4px 8px;
       font-size: 0.75rem;
       border-radius: 2px;
     }
-   
+
   }
 
   .card-body {
-    padding: 25px;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     h4 {
       color: #6a89cc;
       margin-bottom: 15px;
       font-size: 1.1rem;
-      height: 2.4em; 
+      height: 2.4em;
     }
 
     p {
       color: $color-text;
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       line-height: 1.6;
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
   }
 
@@ -148,28 +180,42 @@
   // }
 
   .btn-solid {
-    display: inline-block;
+    // display: inline-block;
     background: $color-accent;
     color: white;
-    padding: 10px 20px;
+    width: 140px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
     text-decoration: none;
-    font-weight: bold;
+    // font-weight: bold;
     border-radius: 4px;
     margin-bottom: 25px;
-    &:hover { background: darken($color-accent, 10%); }
+
+    &:hover {
+      background: darken($color-accent, 10%);
+    }
   }
 
   .btn-solid-blue {
-    display: inline-block;
+    // display: inline-block;
     background: #4183d7;
     color: white;
-    padding: 10px 20px;
+    width: 140px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
     text-decoration: none;
-    font-weight: bold;
+    // font-weight: bold;
     border-radius: 4px;
     margin-bottom: 25px;
-    &:hover { background: darken(#4183d7, 10%); }
-  } 
+
+    &:hover {
+      background: darken(#4183d7, 10%);
+    }
+  }
 
   .card-footer {
     border-top: 1px solid $border-color;
@@ -189,9 +235,18 @@
     .author-info {
       display: flex;
       flex-direction: column;
+      font-family: 'poppins', 'Inter', sans-serif;
       font-size: 0.85rem;
-      strong { color: $color-primary; }
-      span { color: #999; }
+
+      strong {
+        color: $color-primary;
+      }
+
+      span {
+        font-family: 'poppins', 'Inter', sans-serif;
+        color: #999;
+        font-size: 0.85rem;
+      }
     }
   }
 }

@@ -1,65 +1,70 @@
 .banner {
-  background: linear-gradient(to right, rgba(0,0,0,0.8) 20%, transparent 80%), url("../assets/netmatters.png") center/cover no-repeat;
-  height: 80vh;
-  width: 100vw;
-  display: flex;       
-  align-items: center;
-  justify-content: flex-start;
-  color: white;
-  text-align: center;
-  // background-color: green;
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.8) 20%,
+      transparent 80%),
+    url("../assets/netmatters.png") center/cover no-repeat;
 
- .container {
-    // background-color: blue;
-    // max-width: 800px; 
-    padding: 40px;
+  height: 80vh;
+  width: 100vw; // 
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: $font-family;
+  
+
+  .container {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 20px;
+
     display: flex;
     flex-direction: column;
-    align-items: stretch; 
+    align-items: center; // mobile center
     justify-content: center;
-    align-items: center;
-    // width: 50%;
-    // gap: 16px;
-    // justify-content: flex-start; 
-  }
-    h1 {
-      font-size: 36px;
-    }
-    p{
-      font-size: 20px;
-      margin: 20px 0;
-    }
-  
-    button {
-      background: $primary-color;
-      border: none;
-      padding: 20px 25px;
-      object-fit: contain;
-      color: white;
-      cursor: pointer;
-
-      &:hover {
-        background: darken($primary-color, 10%);
-      }
-    }
-    
+    text-align: center;
   }
 
+  h1 {
+    font-size: 36px;
+  }
 
-//  Desktop screens
-@media (min-width: #{$laptop-width}) {
+  p {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+
+  button {
+    background: $primary-color;
+    border: none;
+    padding: 20px 25px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+}
+
+
+@media (min-width: 738px) {
   .banner {
-      h1{
-        font-size: 48px;
-      }
-      p{
+    padding-left: 20px;
+    padding-right: 20px;
+
+    h1 {
+      font-size: 48px;
+      width: 70%;
+    }
+
+    p {
       font-size: 18px;
       margin: 20px 0;
+      width: 50%;
     }
-    
+
     .container {
-      padding: 0px;
-      // width: fit-content;
       max-width: 1200px;
       display: flex;
        flex-direction: column;
@@ -69,3 +74,5 @@
     }
   }
 }
+
+

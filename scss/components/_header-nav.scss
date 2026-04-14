@@ -3,6 +3,7 @@
     width: 100vw;
     // padding: 0 4%;
     // padding: 0 20px;
+    // background-color: pink;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -32,6 +33,7 @@
     }
 }
 
+
 // }
 
 // background-color: blue;
@@ -57,9 +59,10 @@
     text-decoration: none;
     // background-color: red;
     // height: 100%;
-    background-color: red;
+    // background-color: red;
     position: relative;
     //opacity: 1;
+
 }
 
 
@@ -75,7 +78,6 @@
     // height: 100%;
     // background-color: #67819f;
     position: relative;
-
 }
 
 .nav-item-child {
@@ -92,10 +94,14 @@
     // position: relative; 
 
     img {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 10px;
-}
+        width: 30px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 // .consultancy-a:hover {
@@ -126,12 +132,14 @@
 
 small {
     display: block;
+    font-family: $font-family;
     font-size: 10px;
     font-weight: 400;
 }
 
 span {
     display: inline;
+    font-family: $font-family;
     font-size: 17px;
     font-weight: 500;
     line-height: 1.2;
@@ -148,28 +156,9 @@ span {
 $bg-color: #4a6a8a; // The slate blue from your image
 $text-color: #ffffff;
 
-// .consultancy-hover-section-old {
-//     position: absolute;
-//     top: 100%;
-//     /* place just below parent */
-//     left: 0;
-//     width: 100vw;
-//     /* hidden by default */
-//     opacity: 0;
-//     visibility: hidden;
-//     transition: 0.3s;
-//     /* full screen width */
-//     //visibility:collapse;
-//     background-color: $bg-color;
-//     color: $text-color;
-//     // align-self: flex-start;
-//     // bottom: 0px;
-//     // width: 100vw;
-//     // // padding: 60px 10%;
-//     // margin: 50px 0;
-//     font-family: $font-family;
 
 .sample-hover-section-title {
+    font-family: $font-family;
     font-size: 2.2rem;
     margin-bottom: 40px;
     font-weight: 500;
@@ -194,6 +183,7 @@ $text-color: #ffffff;
 .sample-hover-section-item {
     display: flex;
     align-items: center;
+    font-family: $font-family;
     font-size: 1.1rem;
     // transition: transform 0.2s ease;
 
@@ -212,156 +202,146 @@ $text-color: #ffffff;
     }
 }
 
-// }
-
 
 
 // -------------------------------------------------
 
 
-// .nav-item-grandparnt:has(.consultancy-a:hover) 
-// .consultancy-hover-section {
-//     opacity: 1;
-//     visibility: visible;
-//     color: white;
-// }
-
-
-// .consultancy-hover-section:hover {
-//     .consultancy-hover-section {
-//     opacity: 1;
-//     visibility: visible;
-//     color: white;
-// }
-// .consultancy-a {
-//     visibility: visible;
-//     width: 165px;
-//     background-color: #67819f;
-//     padding: 0;
-
-
-//     .consultancy-img {
-//         filter: brightness(0) invert(1);
-//     }
-//     //  border : 3px solid blue;
-// }
-// }
-
-
-
-// .consultancy-hover-section:hover {
-//     .consultancy-hover-section {
-//         opacity: 1;
-//         visibility: visible;
-//         color: white;
-//     }
-// }
-
-// .nav-item-grandparnt:has(.consultancy-a:hover),
-// .nav-item-grandparnt:has(.consultancy-hover-section:hover) {
-// }
-
-
-
-//chat
-
-
 
 @mixin nav-hover-behavior($name, $color) {
-  // Show section when link is hovered OR when section itself is hovered
-  .nav-item-grandparnt:has(.#{$name}-a:hover) .#{$name}-hover-section,
-  .nav-item-grandparnt:has(.#{$name}-hover-section:hover) .#{$name}-hover-section {
-    opacity: 1;
-    visibility: visible;
-    color: white;
-  }
 
-  // Keep the tile highlighted when hovering the dropdown section
-  .nav-item-grandparnt:has(.#{$name}-hover-section:hover) .#{$name}-a {
-    background-color: $color;
-    padding: 0;
-    
-    .#{$name}-img {
-      filter: brightness(0) invert(1);
+    // Show section when link is hovered OR when section itself is hovered
+    .nav-item-grandparnt:has(.#{$name}-a:hover) .#{$name}-hover-section,
+    .nav-item-grandparnt:has(.#{$name}-hover-section:hover) .#{$name}-hover-section {
+        opacity: 1;
+        visibility: visible;
+        color: white;
     }
-  }
 
-  // Triangle visibility logic
-  .nav-item-grandparnt:has(.#{$name}-hover-section:hover, 
-                           .#{$name}-hover-section *:hover,
-                           .#{$name}-a:hover)
-  .#{$name}-a::after {
-    opacity: 1;
-    z-index: 50;
-  }
+    // Keep the tile highlighted when hovering the dropdown section
+    .nav-item-grandparnt:has(.#{$name}-hover-section:hover) .#{$name}-a {
+        background-color: $color;
+        padding: 0;
 
-  // Specific link styles
-  .#{$name}-a {
-    width: 165px;
-    &::after {
-      @include triangle-style;
-      border-color: $color transparent transparent transparent;
-      z-index: 100;
-      filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
+        .#{$name}-img {
+            filter: brightness(0) invert(1);
+        }
     }
-    &:hover {
-      background-color: $color;
-      padding: 0;
-      .#{$name}-img {
-        filter: brightness(0) invert(1);
-      }
+
+    // Triangle visibility logic
+    .nav-item-grandparnt:has(.#{$name}-hover-section:hover,
+        .#{$name}-hover-section *:hover,
+        .#{$name}-a:hover) .#{$name}-a::after {
+        opacity: 1;
+        z-index: 50;
     }
-  }
 
-  // Common section styles
-  .#{$name}-hover-section {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100vw;
-    background-color: $color;
-    padding: 60px 10%;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-  }
-}
+    // Specific link styles
+    .#{$name}-a {
+        width: 165px;
 
+        &::after {
+            @include triangle-style;
+            border-color: $color transparent transparent transparent;
+            z-index: 100;
+            filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
+        }
 
+        &:hover {
+            background-color: $color;
+            padding: 0;
 
-
-
-// Consultancy
-@include nav-hover-behavior('consultancy', #67819f);
-.consultancy-img { filter: invert(53%) sepia(13%) saturate(1153%) hue-rotate(172deg) brightness(92%) contrast(86%); }
-
-// IT Support
-@include nav-hover-behavior('it-support', #4d8ad1);
-.it-support-img { filter: invert(53%) sepia(35%) saturate(735%) hue-rotate(174deg) brightness(91%) contrast(87%); }
-
-// Marketing
-@include nav-hover-behavior('marketing', #2ecc71);
-.marketing-img { filter: invert(65%) sepia(82%) saturate(415%) hue-rotate(95deg) brightness(95%) contrast(92%); }
-
-// Telecoms
-@include nav-hover-behavior('telecoms', #d64541);
-.telecoms-img { filter: invert(34%) sepia(54%) saturate(913%) hue-rotate(315deg) brightness(91%) contrast(89%); }
-
-// Web Design
-@include nav-hover-behavior('web-design', #9b59b6);
-.web-design-img { filter: invert(43%) sepia(35%) saturate(1048%) hue-rotate(241deg) brightness(87%) contrast(85%); }
-
-// Cyber
-@include nav-hover-behavior('cyber', #e67e22);
-.cyber-img { filter: invert(59%) sepia(85%) saturate(1633%) hue-rotate(345deg) brightness(94%) contrast(92%); }
-
-// Developer
-@include nav-hover-behavior('developer', #e74c3c);
-.developer-img { filter: invert(41%) sepia(82%) saturate(3015%) hue-rotate(341deg) brightness(96%) contrast(90%); }
+            .#{$name}-img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
 
 
+    // 👉 When screen is smaller
+    @media (max-width: 1200px) {
+        .#{$name}-a {
+            width: 135px;
+
+            &::after {
+                @include mini-triangle-style;
+                border-color: $color transparent transparent transparent;
+                z-index: 100;
+                filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
+            }
+
+            &:hover {
+                background-color: $color;
+                padding: 0;
+
+                .#{$name}-img {
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+    }
+
+        // Common section styles
+        .#{$name}-hover-section {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100vw;
+            background-color: $color;
+            padding: 60px 10%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+    }
 
 
 
+    // Consultancy
+    @include nav-hover-behavior('consultancy', #67819f);
 
-// ---------------------------------------------------
+    .consultancy-img {
+        filter: invert(53%) sepia(13%) saturate(1153%) hue-rotate(172deg) brightness(92%) contrast(86%);
+    }
+
+    // IT Support
+    @include nav-hover-behavior('it-support', #4d8ad1);
+
+    .it-support-img {
+        filter: invert(53%) sepia(35%) saturate(735%) hue-rotate(174deg) brightness(91%) contrast(87%);
+    }
+
+    // Marketing
+    @include nav-hover-behavior('marketing', #2ecc71);
+
+    .marketing-img {
+        filter: invert(65%) sepia(82%) saturate(415%) hue-rotate(95deg) brightness(95%) contrast(92%);
+    }
+
+    // Telecoms
+    @include nav-hover-behavior('telecoms', #d64541);
+
+    .telecoms-img {
+        filter: invert(34%) sepia(54%) saturate(913%) hue-rotate(315deg) brightness(91%) contrast(89%);
+    }
+
+    // Web Design
+    @include nav-hover-behavior('web-design', #9b59b6);
+
+    .web-design-img {
+        filter: invert(43%) sepia(35%) saturate(1048%) hue-rotate(241deg) brightness(87%) contrast(85%);
+    }
+
+    // Cyber
+    @include nav-hover-behavior('cyber', #e67e22);
+
+    .cyber-img {
+        filter: invert(59%) sepia(85%) saturate(1633%) hue-rotate(345deg) brightness(94%) contrast(92%);
+    }
+
+    // Developer
+    @include nav-hover-behavior('developer', #e74c3c);
+
+    .developer-img {
+        filter: invert(41%) sepia(82%) saturate(3015%) hue-rotate(341deg) brightness(96%) contrast(90%);
+    }

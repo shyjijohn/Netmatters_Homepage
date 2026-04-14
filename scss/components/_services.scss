@@ -1,5 +1,6 @@
 .services {
   width: 100%;
+  font-family: $font-family;
   // max-width: 1200px;
   // padding: 20px 16px;
   // background: #f2f3f5;
@@ -94,7 +95,7 @@
 .card {
   // width: 100%;
   background: white;
-  border: 1px solid white;
+  border: 1px solid #ccc;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   padding: 30px 30px;
@@ -603,8 +604,30 @@
   }
 }
 
+// ipad portrait Layout
 
-//  Desktop Layout
+@media (min-width: 380px) {
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    // First 3 rows → 1 card each
+    .card:nth-child(1),
+    .card:nth-child(2),
+    .card:nth-child(3) {
+      grid-column: span 2;
+    }
+
+    // Next rows → 2 cards per row (default)
+    .card:nth-child(n + 4) {
+      grid-column: span 1;
+    }
+  }
+}
+
+
+//  ipad landscape Layout
 
 @media (min-width: 768px) {
   .services {
@@ -617,28 +640,85 @@
 
     // 2 columns 
     &__grid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(6, 1fr);
       gap: 16px;
     }
-  }
-}
 
-@media (min-width: #{$desktop-max}) {
-  .services {
+    // 🔥 First 3 cards (BIG)
+    .card:nth-child(-n + 3) {
+      grid-column: span 2; // 2+2+2 = 6
+    }
 
-    // 3 columns 
-    &__grid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // Middle row → 2 cards
+    .card:nth-child(4),
+    .card:nth-child(5) {
+      grid-column: span 3; // 3+3 = 6
+    }
+
+    // Last row → 2 cards
+    .card:nth-child(6),
+    .card:nth-child(7) {
+      grid-column: span 3;
     }
   }
 }
 
-@media (min-width: #{$laptop-width}) {
-  .services {
+// Desktop Layout
 
-    // 3 columns 
-    &__grid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+@media (min-width: 1024px) {
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+
+    // First row → 3 cards
+    .card:nth-child(-n + 3) {
+      grid-column: span 4; // 2+2+2 = 6 (nice spacing)
+    }
+
+    // Second row → 4 cards
+    .card:nth-child(n + 4) {
+      grid-column: span 3; // 3+3+3+3 = 12
     }
   }
 }
+
+
+
+// @media (min-width: 1024px) {
+//   .services {
+//     // padding: 60px 40px;
+//     // margin: 20px auto;
+
+//     &__title {
+//       font-size: 48px;
+//     }
+
+//     // 2 columns 
+//     &__grid {
+//       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+//       gap: 16px;
+//     }
+//   }
+// }
+
+
+// @media (min-width: #{$desktop-max}) {
+//   .services {
+
+//     // 3 columns 
+//     &__grid {
+//       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//     }
+//   }
+// }
+
+// @media (min-width: #{$laptop-width}) {
+//   .services {
+
+//     // 3 columns 
+//     &__grid {
+//       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//     }
+//   }
+// }
