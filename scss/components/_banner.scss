@@ -1,78 +1,65 @@
 .banner {
-  background: linear-gradient(to right,
-      rgba(0, 0, 0, 0.8) 20%,
-      transparent 80%),
-    url("../assets/netmatters.png") center/cover no-repeat;
-
   height: 550px;
-  width: 100vw; // 
-  display: flex;
-  align-items: center;
-  color: white;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
   font-family: $font-family;
-  
-
-  .container {
-    width: 100%;
-    max-width: 600px; 
-    margin: 0 auto;
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center; // mobile center
-    justify-content: center;
-    text-align: center;
-  }
+  color: white;
 
   h1 {
     font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 16px;
   }
 
   p {
-    font-size: 20px;
-    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 24px;
   }
 
   button {
-    background: $primary-color;
+    background: #7b5ea7;
     border: none;
-    padding: 20px 25px;
+    padding: 16px 24px;
     color: white;
     cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 
     &:hover {
-      background: darken($primary-color, 10%);
+      background: darken(#7b5ea7, 10%);
     }
+  }
+
+  .container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
 
-
 @media (min-width: 738px) {
   .banner {
-    padding-left: 20px;
-    padding-right: 20px;
-
     h1 {
       font-size: 48px;
       width: 70%;
     }
 
     p {
-      font-size: 18px;
-      margin: 20px 0;
       width: 50%;
     }
 
     .container {
-      max-width: 1200px;
       display: flex;
-       flex-direction: column;
-       justify-content: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
       align-items: flex-start;
       text-align: left;
     }
   }
 }
-
-
