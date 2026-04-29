@@ -3,10 +3,22 @@
   const dots = document.querySelectorAll('.dot');
   let current = 0;
   let timer;
+  let exitTimeout;
 
   function goTo(index) {
-    slides[current].classList.remove('slide--active');
+    const exiting = slides[current];
+    exiting.classList.remove('slide--active');
+    exiting.classList.add('slide--exit');
     dots[current].classList.remove('dot--active');
+
+    clearTimeout(exitTimeout);
+    exitTimeout = setTimeout(function () {
+      exiting.style.transition = 'none';
+      exiting.classList.remove('slide--exit');
+      exiting.offsetHeight; // force reflow before re-enabling transition
+      exiting.style.transition = '';
+    }, 800);
+
     current = index;
     slides[current].classList.add('slide--active');
     dots[current].classList.add('dot--active');
