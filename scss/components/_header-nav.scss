@@ -54,15 +54,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // margin: 10px 10px;
-    // padding: 10px 0;
     text-decoration: none;
-    // background-color: red;
-    // height: 100%;
-    // background-color: red;
     position: relative;
-    //opacity: 1;
-
+    z-index: 100;
 }
 
 
@@ -210,46 +204,32 @@ $text-color: #ffffff;
 
 @mixin nav-hover-behavior($name, $color) {
 
-    // Show section when link is hovered OR when section itself is hovered
-    .nav-item-grandparnt:has(.#{$name}-a:hover) .#{$name}-hover-section,
-    .nav-item-grandparnt:has(.#{$name}-hover-section:hover) .#{$name}-hover-section {
-        opacity: 1;
-        visibility: visible;
-        color: white;
-    }
-
-    // Keep the tile highlighted when hovering the dropdown section
-    .nav-item-grandparnt:has(.#{$name}-hover-section:hover) .#{$name}-a {
+    // Nav item: active state (driven by JS .is-active class)
+    .#{$name}-a.is-active {
         background-color: $color;
-        padding: 0;
 
         .#{$name}-img {
             filter: brightness(0) invert(1);
         }
+
+        &::after {
+            opacity: 1;
+            z-index: 300;
+        }
     }
 
-    // Triangle visibility logic
-    .nav-item-grandparnt:has(.#{$name}-hover-section:hover,
-        .#{$name}-hover-section *:hover,
-        .#{$name}-a:hover) .#{$name}-a::after {
-        opacity: 1;
-        z-index: 50;
-    }
-
-    // Specific link styles
+    // Nav item base styles
     .#{$name}-a {
         width: 165px;
+        cursor: pointer;
 
         &::after {
             @include triangle-style;
             border-color: $color transparent transparent transparent;
-            z-index: 100;
-            filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
         }
 
         &:hover {
             background-color: $color;
-            padding: 0;
 
             .#{$name}-img {
                 filter: brightness(0) invert(1);
@@ -257,8 +237,6 @@ $text-color: #ffffff;
         }
     }
 
-
-    // 👉 When screen is smaller
     @media (max-width: 1200px) {
         .#{$name}-a {
             width: 135px;
@@ -266,13 +244,10 @@ $text-color: #ffffff;
             &::after {
                 @include mini-triangle-style;
                 border-color: $color transparent transparent transparent;
-                z-index: 100;
-                filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
             }
 
             &:hover {
                 background-color: $color;
-                padding: 0;
 
                 .#{$name}-img {
                     filter: brightness(0) invert(1);
@@ -281,19 +256,26 @@ $text-color: #ffffff;
         }
     }
 
-        // Common section styles
-        .#{$name}-hover-section {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100vw;
-            background-color: $color;
-            padding: 60px 10%;
-            opacity: 0;
-            visibility: hidden;
-            transition: 0.3s;
+    // Dropdown section: hidden by default, shown via .is-active
+    .#{$name}-hover-section {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        background-color: $color;
+        padding: 60px 10%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+        z-index: 200;
+        color: white;
+
+        &.is-active {
+            opacity: 1;
+            visibility: visible;
         }
     }
+}
 
 
 
