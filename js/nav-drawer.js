@@ -13,9 +13,8 @@
     overlay.classList.add('nav-drawer__overlay--visible');
     hamburgers.forEach(function (btn) { btn.classList.add('is-active'); });
 
-    if (isDesktop()) {
-      document.body.classList.add('nav-drawer-push-open');
-    } else {
+    document.body.classList.add('nav-drawer-push-open');
+    if (!isDesktop()) {
       document.body.classList.add('nav-drawer-body-lock');
     }
   }
