@@ -1,0 +1,88 @@
+/* Dark overlay behind the modal */
+.cookie-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The white modal box */
+.cookie-modal {
+  background: #fff;
+  max-width: 500px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.cookie-modal h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 15px 0;
+}
+
+.cookie-modal hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 15px 0;
+}
+
+.cookie-modal p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.cookie-modal p a {
+  color: #7b5ea7; /* purple to match Netmatters */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cookie-modal p a:hover {
+  text-decoration: underline;
+}
+
+/* Button row */
+.cookie-modal__buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.cookie-btn {
+  flex: 1;
+  padding: 16px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.cookie-btn--grey {
+  background-color: #9e9e9e;
+  color: #fff;
+}
+
+.cookie-btn--grey:hover {
+  background-color: #888;
+}
+
+.cookie-btn--purple {
+  background-color: #7b5ea7;
+  color: #fff;
+}
+
+.cookie-btn--purple:hover {
+  background-color: #6a4f93;
+}
