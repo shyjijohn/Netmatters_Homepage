@@ -44,8 +44,8 @@
 
 
 .btn__outline2 {
-  background-color: #333645; 
-  border: none;              
+  background-color: #333645;
+  border: none;
   border-radius: 4px;
   padding: 5px 15px;
   display: flex;
@@ -53,9 +53,22 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  height: 56px;              
+  height: 56px;
   width: 70px;
   cursor: pointer;
+
+  &.is-active .menu_div {
+    display: none;
+  }
+
+  &.is-active::after {
+    content: "\f00d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #fff;
+    font-size: 22px;
+    display: block;
+  }
 
   // img {
   //   width: 25px;

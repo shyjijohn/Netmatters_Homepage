@@ -1,3 +1,15 @@
+.sticky-header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+
+  &.header-hidden {
+    transform: translateY(-100%);
+  }
+}
+
 .header {
   // background: red;
   // height: 20%;

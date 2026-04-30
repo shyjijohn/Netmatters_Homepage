@@ -1,8 +1,29 @@
+:root {
+  --drawer-width: 370px;
+}
+
+@media (max-width: 737px) {
+  :root {
+    --drawer-width: 75vw;
+  }
+  .nav-drawer {
+    width: var(--drawer-width);
+  }
+}
+
+#pagePushWrapper {
+  transition: transform 0.3s ease;
+}
+
+.nav-drawer-push-open #pagePushWrapper {
+  transform: translateX(calc(-1 * var(--drawer-width)));
+}
+
 .nav-drawer {
   position: fixed;
   top: 0;
   right: 0;
-  width: 370px;
+  width: var(--drawer-width);
   height: 100vh;
   background-color: #262834;
   z-index: 9999;
