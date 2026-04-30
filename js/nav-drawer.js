@@ -1,16 +1,29 @@
 (function () {
   const drawer = document.getElementById('navDrawer');
   const overlay = document.getElementById('navDrawerOverlay');
+  const pushWrapper = document.getElementById('pagePushWrapper');
   const hamburgers = document.querySelectorAll('.btn__outline2');
+
+  function isDesktop() {
+    return window.innerWidth >= 738;
+  }
 
   function openDrawer() {
     drawer.classList.add('nav-drawer--open');
     overlay.classList.add('nav-drawer__overlay--visible');
-    document.body.classList.add('nav-drawer-body-lock');
+    hamburgers.forEach(function (btn) { btn.classList.add('is-active'); });
+
+    if (isDesktop()) {
+      document.body.classList.add('nav-drawer-push-open');
+    } else {
+      document.body.classList.add('nav-drawer-body-lock');
+    }
   }
 
   function closeDrawer() {
     drawer.classList.remove('nav-drawer--open');
+    hamburgers.forEach(function (btn) { btn.classList.remove('is-active'); });
+    document.body.classList.remove('nav-drawer-push-open');
     overlay.classList.remove('nav-drawer__overlay--visible');
     document.body.classList.remove('nav-drawer-body-lock');
   }
