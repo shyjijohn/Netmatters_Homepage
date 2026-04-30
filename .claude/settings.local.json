@@ -2,9 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(git checkout *)",
-      "Bash(npx sass *)",
-      "Bash(sass --version)",
-      "Bash(node -e \"require\\('sass'\\)\")"
+      "Bash(npx sass *)"
     ]
   }
 }
+
+
+
+
+

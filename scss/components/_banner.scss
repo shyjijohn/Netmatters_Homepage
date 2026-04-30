@@ -19,7 +19,6 @@
   }
 
   button {
-    background: #7b5ea7;
     border: none;
     padding: 16px 24px;
     color: white;
@@ -27,11 +26,60 @@
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.5px;
+  }
+    .consultancy-btn-color {
+      background: #7b5ea7;
+    }
 
-    &:hover {
+    .consultancy-btn-color:hover {
       background: darken(#7b5ea7, 10%);
     }
-  }
+    .bespoke-btn-color {
+      background: #f7b322;
+    }
+
+    .bespoke-btn-color:hover {
+      background: darken(#f7b322, 10%);
+    }
+
+    .it-support-btn-color {
+      background: #4183d7;
+    }
+
+    .it-support-btn-color:hover {
+      background: darken(#4183d7, 10%);
+    }
+  
+    .digital-marketing-btn-color {
+      background: #2ecc71;
+    }
+
+    .digital-marketing-btn-color:hover {
+      background: darken(#2ecc71, 10%);
+    }
+    .telecoms-btn-color {
+      background: #d64541;
+    }
+
+    .telecoms-btn-color:hover {
+      background: darken(#d64541, 10%);
+    }
+
+    .web-design-btn-color {
+      background: #926fb1;
+    }
+
+    .web-design-btn-color:hover {
+      background: darken(#926fb1, 10%);
+    }
+    .cyber-security-btn-color {
+      background: #f62459;
+    }
+
+    .cyber-security-btn-color:hover {
+      background: darken(#f62459, 10%);
+    }
+  
 
   .container {
     padding: 20px;

@@ -81,6 +81,14 @@
   <!-- NAV DRAWER -->
   <div class="nav-drawer__overlay" id="navDrawerOverlay"></div>
   <nav class="nav-drawer" id="navDrawer">
+    <div class="nav-drawer__header">
+      <button class="nav-drawer__close-btn" id="navDrawerClose" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="nav-drawer__search-btn" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
     <div class="nav-drawer__inner">
 
       <!-- DESKTOP drawer content (unchanged) -->
@@ -147,7 +155,7 @@
         <!-- Consultancy & Development -->
         <div class="nav-drawer__service-category">
           <img src="assets/services-1-bg-rem.png" class="consultancy-img" alt="Consultancy" />
-          <p class="nav-drawer__service-small">CONSULTANCY</p>
+          <p class="nav-drawer__service-small" style="color: #67819f;">CONSULTANCY</p>
           <p class="nav-drawer__service-name">& DEVELOPMENT</p>
         </div>
         <ul class="nav-drawer__sublist">
@@ -165,7 +173,7 @@
         <!-- IT Support -->
         <div class="nav-drawer__service-category">
           <img src="assets/services-2-bg-rem.png" class="it-support-img" alt="IT Support" />
-          <p class="nav-drawer__service-small">IT</p>
+          <p class="nav-drawer__service-small" style="color: #4d8ad1;">IT</p>
           <p class="nav-drawer__service-name">SUPPORT</p>
         </div>
         <ul class="nav-drawer__sublist">
@@ -180,7 +188,7 @@
         <!-- Digital Marketing -->
         <div class="nav-drawer__service-category">
           <img src="assets/services-3-bg-rem.png" class="marketing-img" alt="Digital Marketing" />
-          <p class="nav-drawer__service-small">DIGITAL</p>
+          <p class="nav-drawer__service-small" style="color: #2ecc71;">DIGITAL</p>
           <p class="nav-drawer__service-name">MARKETING</p>
         </div>
         <ul class="nav-drawer__sublist">
@@ -195,7 +203,7 @@
         <!-- Telecoms -->
         <div class="nav-drawer__service-category">
           <img src="assets/services-4-bg-rem.png" class="telecoms-img" alt="Telecoms Services" />
-          <p class="nav-drawer__service-small">TELECOMS</p>
+          <p class="nav-drawer__service-small" style="color: #d64541;">TELECOMS</p>
           <p class="nav-drawer__service-name">SERVICES</p>
         </div>
         <ul class="nav-drawer__sublist">
@@ -210,7 +218,7 @@
         <!-- Web Design -->
         <div class="nav-drawer__service-category">
           <img src="assets/services-5-bg-rem.png" class="web-design-img" alt="Web Design" />
-          <p class="nav-drawer__service-small">WEB</p>
+          <p class="nav-drawer__service-small" style="color: #9b59b6;">WEB</p>
           <p class="nav-drawer__service-name">DESIGN</p>
         </div>
         <ul class="nav-drawer__sublist">
@@ -225,7 +233,7 @@
         <!-- Cyber Security -->
         <div class="nav-drawer__service-category">
           <img src="assets/services-6-bg-rem.png" class="cyber-img" alt="Cyber Security" />
-          <p class="nav-drawer__service-small">CYBER</p>
+          <p class="nav-drawer__service-small" style="color: #e67e22;">CYBER</p>
           <p class="nav-drawer__service-name">SECURITY</p>
         </div>
         <ul class="nav-drawer__sublist">
@@ -240,7 +248,7 @@
         <!-- Developer Course -->
         <div class="nav-drawer__service-category">
           <img src="assets/services-7-bg-rem.png" class="developer-img" alt="Developer Course" />
-          <p class="nav-drawer__service-small">DEVELOPER</p>
+          <p class="nav-drawer__service-small" style="color: #e74c3c;">DEVELOPER</p>
           <p class="nav-drawer__service-name">COURSE</p>
         </div>
         <ul class="nav-drawer__sublist">
@@ -485,7 +493,7 @@
         <div class="container">
           <h1>The East Of England's Leading Technology Company</h1>
           <p>Performance-driven digital and technology services with complete transparency.</p>
-          <button class="btn__img">WHY CHOOSE US? &rarr;</button>
+          <button class="btn__img consultancy-btn-color">WHY CHOOSE US? &rarr;</button>
         </div>
       </div>
 
@@ -493,7 +501,7 @@
         <div class="container">
           <h1>Bespoke Software</h1>
           <p>Delivering expert bespoke software solutions across a range of industries.</p>
-          <button class="btn__img">FIND OUT MORE &rarr;</button>
+          <button class="btn__img bespoke-btn-color">FIND OUT MORE &rarr;</button>
         </div>
       </div>
 
@@ -501,7 +509,7 @@
         <div class="container">
           <h1>IT Support</h1>
           <p>Fast and cost-effective IT support services for your business.</p>
-          <button class="btn__img">FIND OUT MORE &rarr;</button>
+          <button class="btn__img it-support-btn-color">FIND OUT MORE &rarr;</button>
         </div>
       </div>
 
@@ -509,7 +517,7 @@
         <div class="container">
           <h1>Digital Marketing</h1>
           <p>Generating your new business through results-driven marketing activities.</p>
-          <button class="btn__img">FIND OUT MORE &rarr;</button>
+          <button class="btn__img digital-marketing-btn-color">FIND OUT MORE &rarr;</button>
         </div>
       </div>
 
@@ -517,7 +525,7 @@
         <div class="container">
           <h1>Telecoms Services</h1>
           <p>A new approach to connectivity, see how we can help your business.</p>
-          <button class="btn__img">FIND OUT MORE &rarr;</button>
+          <button class="btn__img telecoms-btn-color">FIND OUT MORE &rarr;</button>
         </div>
       </div>
 
@@ -525,7 +533,7 @@
         <div class="container">
           <h1>Web Design</h1>
           <p>For businesses looking to make a strong and effective first impression.</p>
-          <button class="btn__img">FIND OUT MORE &rarr;</button>
+          <button class="btn__img web-design-btn-color">FIND OUT MORE &rarr;</button>
         </div>
       </div>
 
@@ -533,7 +541,7 @@
         <div class="container">
           <h1>Cyber Security</h1>
           <p>Keeping businesses and their customers sensitive information protected.</p>
-          <button class="btn__img btn__yellow">FIND OUT MORE &rarr;</button>
+          <button class="btn__img cyber-security-btn-color">FIND OUT MORE &rarr;</button>
         </div>
       </div>
 

@@ -1,35 +1,25 @@
 .services-nav {
     background-color: #333645;
     width: 100vw;
-    // padding: 0 4%;
-    // padding: 0 20px;
-    // background-color: pink;
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    height: 100px;
 }
 
 .services-list {
     flex: 1;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    // align-self: center;
+    align-items: stretch;
     justify-content: space-between;
-    //background-color: blue;
-    max-height: 100px;
-
 }
 
 @media (min-width: #{$laptop-width}) {
     .services-list {
-        // flex-direction: row;
-        // justify-content: space-between;
-        align-self: center;
         padding: 0 20px;
         max-width: 1200px;
-        height: 100%;
     }
 }
 
@@ -50,6 +40,7 @@
 
 
 .nav-item-grandparnt {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,13 +55,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    // margin: 10px 0;
-    // padding: 10px 0;
+    justify-content: center;
     text-decoration: none;
     color: #fff;
-    // height: 100%;
-    // background-color: #67819f;
     position: relative;
 }
 
@@ -197,7 +184,6 @@ $text-color: #ffffff;
 }
 
 
-
 // -------------------------------------------------
 
 
@@ -273,6 +259,20 @@ $text-color: #ffffff;
         &.is-active {
             opacity: 1;
             visibility: visible;
+        }
+    }
+    @media (min-width: 1000px) {
+        .#{$name}-hover-section {
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .sample-hover-section-title,
+            .sample-hover-section-grid {
+                width: 100%;
+                max-width: 1200px;
+            }
         }
     }
 }

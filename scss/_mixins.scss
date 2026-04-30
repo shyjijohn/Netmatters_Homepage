@@ -93,6 +93,7 @@
 
   opacity: 0;
   z-index: 1;
+  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.4));
   // transition: opacity 0.2s ease;
 }
 @mixin mini-triangle-style {
@@ -110,5 +111,6 @@
 
   opacity: 0;
   z-index: 1;
+  filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.4));
   // transition: opacity 0.2s ease;
 }
