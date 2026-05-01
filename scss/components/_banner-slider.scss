@@ -79,9 +79,11 @@
   box-sizing: border-box;
 
   &.dot--active {
-    background: transparent;
-    border: 2px solid white;
-    width: 14px;
-    height: 14px;
+    background: white;
+    border: none;
+    width: 10px;
+    height: 10px;
+    outline: 2px solid white;
+    outline-offset: 3px;
   }
 }
