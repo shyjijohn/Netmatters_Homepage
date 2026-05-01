@@ -6,6 +6,7 @@
   :root {
     --drawer-width: 75vw;
   }
+
   .nav-drawer {
     width: var(--drawer-width);
   }
@@ -25,7 +26,7 @@
   right: 0;
   width: var(--drawer-width);
   height: 100vh;
-  background-color: #262834;
+  background-color: #333645;
   z-index: 9999;
   transform: translateX(100%);
   transition: transform 0.3s ease;
@@ -60,9 +61,24 @@
   &__section-heading {
     color: white;
     background-color: #333645;
+    text-align: center;
     font-family: $font-family;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    margin: 15px;
+    text-transform: uppercase;
+    border: 0.1px solid #434654;
+  }
+
+  &__section-heading-wo-border {
+    color: white;
+    background-color: #333645;
+    text-align: left;
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: 300;
     letter-spacing: 1px;
     padding: 15px 20px;
     text-transform: uppercase;
@@ -72,6 +88,7 @@
     list-style: none;
     // padding: 15px 0px;
     margin: 0;
+    background-color: black;
 
     li a {
       display: block;
@@ -121,8 +138,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 15px 12px;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    margin: 15px;
     text-align: center;
+    border: 0.1px solid #434654;
 
     img {
       width: 35px;
@@ -154,8 +176,11 @@
 
   &__sublist {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    background-color: black;
+    padding: 15px 20px;
+    margin: 15px;
+    text-align: center;
+    border: 0.1px solid black;
 
     li a {
       display: block;
