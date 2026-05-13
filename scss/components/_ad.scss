@@ -3,7 +3,7 @@
   padding: 40px 0;
   border-top: 1px solid #eee;
   font-family: $font-family;
-  overflow-x: hidden; // important
+  overflow-x: clip;
 
   .container {
     width: 100%;
@@ -21,7 +21,8 @@
     gap: 20px;
 
     width: 100%;
-    overflow: hidden; // important (no scroll)
+    overflow-x: clip;
+    overflow-y: visible;
   }
 
   .ad-item {
@@ -44,6 +45,94 @@
       &:hover {
         filter: grayscale(0%);
         opacity: 1;
+      }
+    }
+
+    &--has-tooltip {
+      position: relative;
+
+      &:hover .ad-tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+  }
+
+  .ad-tooltip {
+    position: absolute;
+    bottom: calc(100% + 24px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    width: 260px;
+    background-color: #2b2d42;
+    color: #fff;
+    border-radius: 4px;
+    padding: 24px 20px 20px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    z-index: 100;
+    pointer-events: none;
+
+    // downward arrow
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 20px solid transparent;
+      border-top-color: #2b2d42;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 12px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 0.82rem;
+      line-height: 1.55;
+      color: #ccc;
+      margin: 0 0 18px;
+    }
+
+    &__btn {
+      display: inline-block;
+      background-color: #7c6bb0;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 10px 16px;
+      border-radius: 3px;
+      text-decoration: none;
+      pointer-events: all;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: darken(#7c6bb0, 8%);
+      }
+
+      &--yellow {
+        background-color: #f5a623;
+
+        &:hover {
+          background-color: darken(#f5a623, 8%);
+        }
+      }
+
+      &--green {
+        background-color: #3aaa35;
+
+        &:hover {
+          background-color: darken(#3aaa35, 8%);
+        }
       }
     }
   }

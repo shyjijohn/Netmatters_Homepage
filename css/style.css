@@ -1790,7 +1790,7 @@ span {
   padding: 40px 0;
   border-top: 1px solid #eee;
   font-family: "poppins", "Inter", sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 .ad .container {
   width: 100%;
@@ -1806,7 +1806,8 @@ span {
   flex-wrap: nowrap;
   gap: 20px;
   width: 100%;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 .ad .ad-item {
   flex: 0 0 auto;
@@ -1828,6 +1829,81 @@ span {
 .ad .ad-item img:hover {
   filter: grayscale(0%);
   opacity: 1;
+}
+.ad .ad-item--has-tooltip {
+  position: relative;
+}
+.ad .ad-item--has-tooltip:hover .ad-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.ad .ad-tooltip {
+  position: absolute;
+  bottom: calc(100% + 24px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 260px;
+  background-color: #2b2d42;
+  color: #fff;
+  border-radius: 4px;
+  padding: 24px 20px 20px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 100;
+  pointer-events: none;
+}
+.ad .ad-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 20px solid transparent;
+  border-top-color: #2b2d42;
+}
+.ad .ad-tooltip h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #fff;
+}
+.ad .ad-tooltip p {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #ccc;
+  margin: 0 0 18px;
+}
+.ad .ad-tooltip__btn {
+  display: inline-block;
+  background-color: #7c6bb0;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  border-radius: 3px;
+  text-decoration: none;
+  pointer-events: all;
+  transition: background-color 0.2s ease;
+}
+.ad .ad-tooltip__btn:hover {
+  background-color: rgb(102.4281938326, 84.2898678414, 157.9101321586);
+}
+.ad .ad-tooltip__btn--yellow {
+  background-color: #f5a623;
+}
+.ad .ad-tooltip__btn--yellow:hover {
+  background-color: rgb(228.8, 146.64, 10.4);
+}
+.ad .ad-tooltip__btn--green {
+  background-color: #3aaa35;
+}
+.ad .ad-tooltip__btn--green:hover {
+  background-color: rgb(47.3883408072, 138.8968609865, 43.3031390135);
 }
 
 @media (max-width: 768px) {
