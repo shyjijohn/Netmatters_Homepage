@@ -5,7 +5,12 @@
       "Bash(npx sass *)",
       "Bash(printf '.btn__outline2.is-active .menu_div{display:none}.btn__outline2.is-active::after{content:\"\\\\\\\\f00d\";font-family:\"Font Awesome 6 Free\";font-weight:900;color:#fff;font-size:22px;display:block}')",
       "Bash(python3 -c ' *)",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(Select-String -Path \"css\\\\style.css\" -Pattern \"news-header\" -Context 5)",
+      "PowerShell($content = Get-Content \"css\\\\style.css\" -Raw; $idx = $content.IndexOf\\('news-header'\\); $content.Substring\\([Math]::Max\\(0,$idx-200\\), [Math]::Min\\(600, $content.Length - [Math]::Max\\(0,$idx-200\\)\\)\\))",
+      "PowerShell($content = Get-Content \"css\\\\style.css\" -Raw; $idx = $content.IndexOf\\('news-card'\\); $content.Substring\\([Math]::Max\\(0,$idx-100\\), [Math]::Min\\(2000, $content.Length - [Math]::Max\\(0,$idx-100\\)\\)\\))",
+      "PowerShell($content = Get-Content \"css\\\\style.css\" -Raw; $idx = $content.IndexOf\\('news-card'\\); $content.Substring\\([Math]::Max\\(0,$idx-50\\), [Math]::Min\\(3000, $content.Length - [Math]::Max\\(0,$idx-50\\)\\)\\))",
+      "PowerShell($content = Get-Content \"css\\\\style.css\" -Raw; $idx = $content.IndexOf\\('.news-card{'\\); $content.Substring\\($idx, [Math]::Min\\(1500, $content.Length - $idx\\)\\))"
     ]
   }
 }

@@ -41,7 +41,7 @@
   @include flex-between;
   align-items: center;
   margin-bottom: 30px;
-  border-bottom: 2px solid $border-color;
+  // border-bottom: 2px solid $border-color;
   padding-bottom: 10px;
 
   h2 {
@@ -86,11 +86,19 @@
   gap: 30px;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr); // tablet
+    grid-template-columns: repeat(2, 1fr);
+
+    .news-card:nth-child(3) {
+      display: none;
+    }
   }
 
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(3, 1fr); // desktop
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+
+    .news-card:nth-child(3) {
+      display: flex;
+    }
   }
 }
 
@@ -98,7 +106,7 @@
 .news-card {
   // flex: 1 1 300px;
   min-width: 0;
-  padding: 10px;
+  padding: 0;
   background: $color-white;
   border: 1px solid $border-color;
   border-radius: 4px;
@@ -159,11 +167,20 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding: 30px;
 
     h4 {
-      color: #6a89cc;
-      margin-bottom: 15px;
-      font-size: 1.1rem;
+      color: #67809f;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      font-size: 1rem;
+      height: 2.4em;
+    }
+    .careers {
+      color: #4183d7;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      font-size: 1rem;
       height: 2.4em;
     }
 
@@ -171,7 +188,7 @@
       color: $color-text;
       font-size: 0.85rem;
       line-height: 1.6;
-      margin: 20px 0;
+      margin: 10px 0 15px;
     }
   }
 
@@ -191,7 +208,7 @@
     text-decoration: none;
     // font-weight: bold;
     border-radius: 4px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     &:hover {
       background: darken($color-accent, 10%);
@@ -210,7 +227,7 @@
     text-decoration: none;
     // font-weight: bold;
     border-radius: 4px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
     &:hover {
       background: darken(#4183d7, 10%);
@@ -218,18 +235,17 @@
   }
 
   .card-footer {
-    border-top: 1px solid $border-color;
-    padding-top: 20px;
+    padding-top: 30px;
     display: flex;
     align-items: center;
-    gap: 15px;
-    height: 20%;
+    // gap: 15px;
 
     .author-img {
       width: 45px;
       height: 45px;
       border: 2px solid $border-color;
       border-radius: 50%;
+      margin-right: 30px;
     }
 
     .author-info {
