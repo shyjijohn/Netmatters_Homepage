@@ -38,12 +38,20 @@
     z-index: 2;
   }
 
+  &.slide--from-left {
+    transform: translateX(-100%);
+  }
+
   &.slide--active {
     transform: translateX(0);
   }
 
   &.slide--exit {
     transform: translateX(-100%);
+  }
+
+  &.slide--exit-right {
+    transform: translateX(100%);
   }
 }
 
