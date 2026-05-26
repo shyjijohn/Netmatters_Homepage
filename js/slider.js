@@ -49,6 +49,7 @@
 
   dots.forEach(function (dot, i) {
     dot.addEventListener('click', function () {
+      if (i === current) return;
       clearInterval(timer);
       goTo(i, i < current ? 'prev' : 'next');
       startTimer();

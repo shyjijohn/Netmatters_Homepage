@@ -10,7 +10,8 @@
       "PowerShell($content = Get-Content \"css\\\\style.css\" -Raw; $idx = $content.IndexOf\\('news-header'\\); $content.Substring\\([Math]::Max\\(0,$idx-200\\), [Math]::Min\\(600, $content.Length - [Math]::Max\\(0,$idx-200\\)\\)\\))",
       "PowerShell($content = Get-Content \"css\\\\style.css\" -Raw; $idx = $content.IndexOf\\('news-card'\\); $content.Substring\\([Math]::Max\\(0,$idx-100\\), [Math]::Min\\(2000, $content.Length - [Math]::Max\\(0,$idx-100\\)\\)\\))",
       "PowerShell($content = Get-Content \"css\\\\style.css\" -Raw; $idx = $content.IndexOf\\('news-card'\\); $content.Substring\\([Math]::Max\\(0,$idx-50\\), [Math]::Min\\(3000, $content.Length - [Math]::Max\\(0,$idx-50\\)\\)\\))",
-      "PowerShell($content = Get-Content \"css\\\\style.css\" -Raw; $idx = $content.IndexOf\\('.news-card{'\\); $content.Substring\\($idx, [Math]::Min\\(1500, $content.Length - $idx\\)\\))"
+      "PowerShell($content = Get-Content \"css\\\\style.css\" -Raw; $idx = $content.IndexOf\\('.news-card{'\\); $content.Substring\\($idx, [Math]::Min\\(1500, $content.Length - $idx\\)\\))",
+      "Bash(npx sass@1.69.0 scss/style.scss css/style.css --no-source-map)"
     ]
   }
 }
