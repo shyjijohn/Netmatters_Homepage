@@ -10,31 +10,30 @@
     gap: 16px;
     max-width: 100%;
     margin: 0;
-    padding: 0; // remove side padding to make full width
+    padding: 0;
   }
 
   &__list {
+    width: 100%;
+    overflow: visible;
+  }
+
+  &__track {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 20px;
-
-    width: 100%;
-    overflow-x: clip;
-    overflow-y: visible;
+    gap: 40px;
+    width: max-content;
   }
 
   .ad-item {
-    flex: 0 0 auto; // makes items distribute evenly
+    flex: 0 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     padding: 0 20px;
 
     img {
-      max-height: 100%;
+      max-height: 60px;
       width: auto;
       object-fit: contain;
       filter: grayscale(100%);
@@ -134,6 +133,13 @@
           background-color: darken(#3aaa35, 8%);
         }
       }
+      &--blue {
+        background-color: #4183D7;
+
+        &:hover {
+          background-color: darken(#4183D7, 8%);
+        }
+      }
     }
   }
 }
@@ -143,14 +149,11 @@
     padding: 20px 0;
   }
 
-  .ad__list {
-    padding-bottom: 10px;
-    flex-wrap: nowrap; // allow wrapping instead of scroll
-    justify-content: center;
-    gap: 15px;
+  .ad__track {
+    gap: 20px;
   }
 
   .ad-item {
-    flex: 0 0 150px; // 2 per row on mobile
+    padding: 0 10px;
   }
 }

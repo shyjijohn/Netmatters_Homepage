@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.getElementById('cookie-settings').addEventListener('click', function () {
-    overlay.classList.remove('is-visible');
+    // intentionally does not close the banner
   });
 });
