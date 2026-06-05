@@ -244,10 +244,12 @@
                 <span>SUPPORT</span>
               </button>
 
+              <a href="contact-us.php" class="contact-link">
               <button class="img-with-icon contact">
                 <img src="assets/contact.png" class="icon-img icon-gap" alt="Contact" />
                 <span>CONTACT</span>
               </button>
+              </a>
 
               <div class="search-desk">
                 <input type="text" placeholder="Search..." class="search-desk__input"
