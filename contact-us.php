@@ -56,7 +56,7 @@ function e($s) { return htmlspecialchars($s ?? '', ENT_QUOTES, 'UTF-8'); }
     include __DIR__ . '/includes/menu.php';
  ?>
 
-// BREADCRUMB 
+<!-- BREADCRUMB -->
 <div class="breadcrumb">
     <div class="container">
         <a href="index.php">Home</a> / <span>Our Offices</span>
@@ -66,7 +66,7 @@ function e($s) { return htmlspecialchars($s ?? '', ENT_QUOTES, 'UTF-8'); }
 <main class="container">
     <h1 class="page-title">Our Offices</h1>
 
-//  OFFICE CARDS 
+  <!-- OFFICE CARDS  -->
     <section class="offices">
         <article class="office-card">
             <img src="assets/cambridge.png" alt="Cambridge Office">
@@ -99,7 +99,7 @@ function e($s) { return htmlspecialchars($s ?? '', ENT_QUOTES, 'UTF-8'); }
         </article>
     </section>
 
-    // FORM + SIDEBAR 
+    <!-- FORM + SIDEBAR  -->
     <section class="contact-section">
 
         <div class="contact-form-wrap">

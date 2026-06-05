@@ -237,7 +237,7 @@
         <div class="desktop-only">
           <div class="container">
             <div class="header__pos">
-              <a href="#" class="desktop-only logo"><img src="assets/logo.png" alt="Netmatters Logo" /></a>
+              <a href="index.php" class="desktop-only logo"><img src="assets/logo.png" alt="Netmatters Logo" /></a>
 
               <button class="img-with-icon support">
                 <img src="assets/mouse.png" class="icon-img icon-gap" alt="Support" />
