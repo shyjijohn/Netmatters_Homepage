@@ -1,51 +1,48 @@
 (function () {
-  var TRANSITION_MS = 300;
-  var PAUSE_MS      = 2000;
+  var TRANSITION_MS = 500;
+  var PAUSE_MS      = 1500;
 
   document.querySelectorAll('.ad__track').forEach(function (track) {
-    var items = Array.from(track.children);
-    var count = items.length;
-
-    items.forEach(function (item) {
-      var clone = item.cloneNode(true);
-      clone.setAttribute('aria-hidden', 'true');
-      track.appendChild(clone);
-    });
-
-    var current = 0;
     var timer;
+    var paused = false;
+    var adEl   = track.closest('.ad');
 
-    function itemWidth() {
-      var gap = parseFloat(window.getComputedStyle(track).gap) || 40;
-      return track.children[0].offsetWidth + gap;
+    function getGap() {
+      var style = window.getComputedStyle(track);
+      return parseFloat(style.columnGap) || parseFloat(style.gap) || 40;
     }
 
     function step() {
-      current++;
+      var first     = track.children[0];
+      var adLeft    = adEl ? adEl.getBoundingClientRect().left : 0;
+      var trackLeft = track.getBoundingClientRect().left - adLeft;
+      var itemWidth = first.getBoundingClientRect().width;
+      var w         = Math.ceil(trackLeft + itemWidth + getGap());
+
       track.style.transition = 'transform ' + TRANSITION_MS + 'ms ease-in-out';
-      track.style.transform  = 'translateX(-' + (current * itemWidth()) + 'px)';
+      track.style.transform  = 'translateX(-' + w + 'px)';
 
       setTimeout(function () {
-        if (current >= count) {
-          current = 0;
-          track.style.transition = 'none';
-          track.style.transform  = 'translateX(0)';
-          track.getBoundingClientRect(); // force reflow before next transition
+        track.appendChild(first);
+        track.style.transition = 'none';
+        track.style.transform  = 'translateX(0)';
+        track.getBoundingClientRect();
+
+        if (!paused) {
+          timer = setTimeout(step, PAUSE_MS);
         }
       }, TRANSITION_MS);
     }
 
-    function start() {
-      timer = setInterval(step, TRANSITION_MS + PAUSE_MS);
-    }
+    track.addEventListener('mouseenter', function () {
+      paused = true;
+      clearTimeout(timer);
+    });
+    track.addEventListener('mouseleave', function () {
+      paused = false;
+      timer = setTimeout(step, PAUSE_MS);
+    });
 
-    function stop() {
-      clearInterval(timer);
-    }
-
-    track.addEventListener('mouseenter', stop);
-    track.addEventListener('mouseleave', start);
-
-    start();
+    timer = setTimeout(step, PAUSE_MS);
   });
 })();

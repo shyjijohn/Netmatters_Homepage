@@ -7,6 +7,8 @@
   <title>Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters</title>
   <link rel="icon" type="image/png" href="assets/m-logo.png" />
 
+  <link rel="stylesheet" href="css/components/contact-us.css">
+
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -231,23 +233,26 @@
 
     <!-- STICKY HEADER WRAPPER -->
     <div class="sticky-header-wrapper">
+      
 
       <!-- HEADER -->
       <header class="header">
         <div class="desktop-only">
           <div class="container">
             <div class="header__pos">
-              <a href="#" class="desktop-only logo"><img src="assets/logo.png" alt="Netmatters Logo" /></a>
+              <a href="index.php" class="desktop-only logo"><img src="assets/logo.png" alt="Netmatters Logo" /></a>
 
               <button class="img-with-icon support">
                 <img src="assets/mouse.png" class="icon-img icon-gap" alt="Support" />
                 <span>SUPPORT</span>
               </button>
 
+              <a href="contact-us.php" class="contact-link">
               <button class="img-with-icon contact">
                 <img src="assets/contact.png" class="icon-img icon-gap" alt="Contact" />
                 <span>CONTACT</span>
               </button>
+              </a>
 
               <div class="search-desk">
                 <input type="text" placeholder="Search..." class="search-desk__input"

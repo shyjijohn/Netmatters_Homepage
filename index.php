@@ -1,3 +1,11 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
+
+<?php include 'includes/header.php'; ?>
 <?php include 'includes/menu.php'; ?>
 
 
@@ -276,70 +284,37 @@
           <a href="#" class="desktop-only view-all-desktop">View All &rarr;</a>
         </div>
 
+                <?php
+        require_once 'config/connection.php';
+        $stmt = $pdo->query("SELECT * FROM news_posts ORDER BY posted_at DESC LIMIT 3");
+        $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        ?>
+
         <div class="news-grid">
-          <article class="news-card">
-            <div class="card-image">
-              <img src="assets/latest-news-1.png" alt="Bespoke Software">
-              <span class="tag">INSIGHTS</span>
-            </div>
-            <div class="card-body">
-              <h4>How Much Could Bespoke Software Add to Your E...</h4>
-              <p>If you're a Managing Director or Senior Manager preparing your business for exit, you know that incr...
-              </p>
-              <a href="#" class="btn-solid">READ MORE</a>
-              <hr>
-              <div class="card-footer">
-                <img src="assets/netmatters-ltd-VXAv.png" alt="Netmatters" class="author-img">
-                <div class="author-info">
-                  <strong>Posted by Netmatters</strong>
-                  <span>27th June 2025</span>
+          <?php foreach ($posts as $post): ?>
+            <article class="news-card">
+              <div class="card-image">
+                <img src="<?= htmlspecialchars($post['image']) ?>" alt="<?= htmlspecialchars($post['title']) ?>">
+                <span class="<?= htmlspecialchars($post['tag_type']) ?>"><?= htmlspecialchars($post['tag']) ?></span>
+              </div>
+              <div class="card-body">
+                <h4><?= htmlspecialchars($post['title']) ?></h4>
+                <p><?= htmlspecialchars($post['excerpt']) ?></p>
+                <a href="#" class="<?= htmlspecialchars($post['btn_class']) ?>">READ MORE</a>
+                <hr>
+                <div class="card-footer">
+                  <img src="<?= htmlspecialchars($post['author_img']) ?>" alt="<?= htmlspecialchars($post['author_name']) ?>" class="author-img">
+                  <div class="author-info">
+                    <strong>Posted by <?= htmlspecialchars($post['author_name']) ?></strong>
+                    <span><?= date('jS F Y', strtotime($post['posted_at'])) ?></span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <div class="card-image">
-              <img src="assets/latest-news-2.png" alt="AI Integration">
-              <span class="tag">INSIGHTS</span>
-            </div>
-            <div class="card-body">
-              <h4>How Can AI Benefit My Business?</h4>
-              <p>The idea of integrating AI into your business operations may seem daunting, but there are undeniable...
-              </p>
-              <a href="#" class="btn-solid">READ MORE</a>
-              <hr>
-              <div class="card-footer">
-                <img src="assets/netmatters-ltd-VXAv.png" alt="Netmatters" class="author-img">
-                <div class="author-info">
-                  <strong>Posted by Netmatters</strong>
-                  <span>26th June 2025</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="news-card">
-            <div class="card-image">
-              <img src="assets/latest-news-3.png" alt="AI Integration">
-              <span class="tag-careers">CAREERS</span>
-            </div>
-            <div class="card-body">
-              <h4 class="careers">1st Line Technician</h4>
-              <p>Salary Range £25,000 - £29,000 + Pension Hours 40 hours per week, Monday to Friday Location
-                Wymondham...</p>
-              <a href="#" class="btn-solid-blue">READ MORE</a>
-              <hr>
-              <div class="card-footer">
-                <img src="assets/bethany-shakespeare-F6Iu.png" alt="Netmatters" class="author-img">
-                <div class="author-info">
-                  <strong>Posted by Bethany Shakespeare</strong>
-                  <span>20th June 2025</span>
-                </div>
-              </div>
-            </div>
-          </article>
+            </article>
+          <?php endforeach; ?>
         </div>
+
+
         <a href="#" class="mobile-only view-all-mobile">View All →</a>
       </div>
     </section>

@@ -1,0 +1,354 @@
+
+
+// Variables 
+$purple: #926FB1;
+$purple-dark: #7d5b9c;
+$navy: #2d2d44;
+$navy-dark: #1d1d30;
+$grey-text: #6b6b6b;
+$grey-light: #e9e9ec;
+$border: #e5e5e5;
+$red: #d9534f;
+
+$container-width: 1240px;
+$tablet: 992px;
+$mobile: 640px;
+
+$font-family: 'poppins', 'Inter', sans-serif;
+
+// Mixins
+@mixin grid($cols, $gap: 28px) {
+    display: grid;
+    grid-template-columns: $cols;
+    gap: $gap;
+}
+
+@mixin button($bg, $hover) {
+    display: inline-block;
+    background: $bg;
+    color: #fff;
+    padding: 13px 26px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background .2s ease;
+
+    &:hover {
+        background: $hover;
+    }
+}
+
+// Base
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $font-family;
+    color: $navy;
+    background: #f5f6f8;
+}
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+// Breadcrumb 
+.breadcrumb {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 18px 0;
+    spacing: 0 8px;
+
+    a {
+        color: $navy;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: $font-family;
+        text-decoration: none;
+    }
+
+    span {
+        color: $grey-text;
+        font-size: 13px;
+        font-family: $font-family;
+        font-weight: 300;
+    }
+}
+
+// Heading 
+.page-title {
+    font-size: 37px;
+    font-family: $font-family;
+    font-weight: 400;
+    color: $navy;
+    margin: 48px 0 56px;
+}
+
+// Office cards 
+.offices {
+    @include grid(repeat(3, 1fr));
+    margin-bottom: 50px;
+}
+
+.office-card {
+    background: #fff;
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+    border: 1px solid $border;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .06);
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+        // margin: 12px 12px 0;
+        display: block;
+    }
+}
+
+.office-body {
+    padding: 22px 24px 28px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-size: 20px;
+        font-weight: 400;
+        font-family: $font-family;
+        color: $navy;
+        margin: 0 0 18px;
+    }
+
+    p {
+        color: $grey-text;
+        line-height: 1.7;
+        font-size: 13px;
+        font-family: $font-family;
+        margin: 0 0 18px;
+    }
+
+    .btn {
+        align-self: flex-start;
+    }
+}
+
+.office-phone {
+    color: $purple !important;
+    font-size: 24px !important;
+    font-family: $font-family;
+    font-weight: 800 !important;
+    letter-spacing: .5px;
+    margin: 0 0 20px !important;
+}
+
+// Buttons 
+.btn {
+    &-purple {
+        @include button($purple, $purple-dark);
+    }
+
+    &-dark {
+        @include button($navy, $navy-dark);
+    }
+}
+
+// Contact section 
+.contact-section {
+    @include grid(2fr 1fr, 40px);
+    margin-bottom: 60px;
+}
+
+.contact-form-wrap {
+    background: $grey-light;
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.form-grid {
+    @include grid(1fr 1fr, 0 20px);
+}
+
+.form-field {
+    margin-bottom: 18px;
+
+    label {
+        display: block;
+        font-family: $font-family;
+        font-weight: 700;
+        color: $navy;
+        margin: 0 0 8px;
+        line-height: 1.2;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        background: #fff;
+        font-size: 15px;
+        font-family: $font-family;
+    }
+}
+
+.req {
+    color: $red;
+}
+
+.checkbox-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin: 16px 0 24px;
+    color: $navy;
+    font-weight: 600;
+    font-family: $font-family;
+    line-height: 1.5;
+
+    input {
+        margin-top: 4px;
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+        border: 2px solid black;
+    }
+
+    a {
+        color: $navy;
+    }
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.required-note {
+    color: #888;
+    font-size: 14px;
+}
+
+// Messages 
+.error {
+    display: block;
+    color: $red;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.alert-success {
+    background: #dff0d8;
+    color: #3c763d;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+}
+
+// Sidebar 
+.sidebar-label {
+    font-weight: 700;
+    color: $navy;
+    margin: 0 0 24px;
+}
+
+.sidebar-highlight {
+    color: $purple;
+    font-size: 26px;
+    font-weight: 700;
+    font-family: $font-family;
+    margin: 0 0 24px;
+}
+
+.contact-sidebar p {
+    font-family: $font-family;
+    line-height: 1.9;
+    margin: 0 0 24px;
+}
+
+// Accordion 
+.accordion {
+    margin-top: 16px;
+
+    &-header {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        font-size: 16px;
+        font-family: $font-family;
+        font-weight: 700;
+        color: $navy;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .chevron {
+            transition: transform .25s ease;
+        }
+
+        &.active .chevron {
+            transform: rotate(180deg);
+        }
+    }
+
+    &-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s ease;
+
+        &.open {
+            max-height: 600px;
+            margin-top: 12px;
+        }
+
+        p {
+            margin: 0 0 16px;
+            line-height: 1.9;
+            font-family: $font-family;
+            color: $grey-text;
+        }
+            
+        .ooh-hours {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 4px 0;
+        }
+    }
+}
+
+// Responsive 
+@media (max-width: $tablet) {
+    .offices {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: $mobile) {
+    .offices {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        font-size: 34px;
+        margin: 32px 0 36px;
+    }
+}

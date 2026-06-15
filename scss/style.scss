@@ -14,7 +14,7 @@
 @import "components/footer";
 @import "components/nav-drawer";
 @import "components/cookie";
-
+@import "components/contact-us";
 
 
 body {
@@ -25,4 +25,8 @@ body {
 .container {
   width: $max-width;
   margin: auto;
+}
+
+html {
+  overflow: hidden;
 }

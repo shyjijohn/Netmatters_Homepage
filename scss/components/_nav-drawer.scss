@@ -14,6 +14,8 @@
 
 #pagePushWrapper {
   transition: transform 0.3s ease;
+  overflow-y: auto;
+  height: 100vh;
 }
 
 .nav-drawer-push-open #pagePushWrapper {
@@ -205,4 +207,8 @@
 
 .nav-drawer-body-lock {
   overflow: hidden;
+
+  #pagePushWrapper {
+    overflow-y: hidden;
+  }
 }

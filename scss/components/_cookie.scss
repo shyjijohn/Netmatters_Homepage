@@ -95,3 +95,23 @@
 .cookie-btn--purple:hover {
   background-color: #6a4f93;
 }
+
+.cookie-body-lock {
+  overflow: hidden;
+
+  #pagePushWrapper {
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-modal__buttons {
+    flex-direction: column;
+  }
+
+  .cookie-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 6px;
+  }
+}
