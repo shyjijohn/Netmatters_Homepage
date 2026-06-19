@@ -204,6 +204,21 @@ error_reporting(E_ALL);
             <div class="ad-item">
               <img src="assets/qms.png" alt="QMS">
             </div>
+            <div class="ad-item">
+              <img src="assets/Changing-Lives.png" alt="Changing Lives">
+            </div>
+            <div class="ad-item">
+              <img src="assets/Skills-of-tomorrow.png" alt="Skills of Tomorrow">
+            </div>
+            <div class="ad-item">
+              <img src="assets/prompt-payment-code.png" alt="Prompt Payment Code">
+            </div>
+            <div class="ad-item">
+              <img src="assets/Investing-in-future-growth.png" alt="Investing in future growth">
+            </div>
+            <div class="ad-item">
+              <img src="assets/GBC_Accredited.png" alt="GBC Accredited">
+            </div>
           </div>
         </div>
       </div>
