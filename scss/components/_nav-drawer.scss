@@ -16,6 +16,7 @@
   transition: transform 0.3s ease;
   overflow-y: auto;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .nav-drawer-push-open #pagePushWrapper {
