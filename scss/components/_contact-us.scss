@@ -51,7 +51,7 @@ body {
     margin: 0;
     font-family: $font-family;
     color: $navy;
-    // background: #f5f6f8;
+    background: #fff;
 }
 
 .container {
@@ -169,7 +169,8 @@ body {
 }
 
 .contact-form-wrap {
-    background: $grey-light;
+    // background: $grey-light;
+     background: white;
     padding: 32px;
     border-radius: 12px;
 }
